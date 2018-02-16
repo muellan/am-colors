@@ -11,14 +11,14 @@ endif
 
 let g:colors_name="ampresent"
 
-hi Normal          guifg=#000000 guibg=#FFFFFF
+hi Normal          guifg=#000000 guibg=#FFFFFF"{{{
 hi ColorColumn                   guibg=#F5F5F5
-hi LineNr          guifg=#909090 guibg=#EAEAEA
+hi LineNr          guifg=#808080 guibg=#EAEAEA
 hi SignColumn      guifg=#555555 guibg=#EAEAEA
-hi FoldColumn      guifg=#87877D guibg=#EAEAEA
-hi VisualNOS                     guibg=#D0D0CA
-hi Visual                        guibg=#D0D0CA
-hi Folded          guifg=#87877D guibg=#C8C8BE  
+hi FoldColumn      guifg=#606055 guibg=#EAEAEA
+hi VisualNOS                     guibg=#A0E5FF
+hi Visual                        guibg=#A0E5FF
+hi Folded          guifg=#202020 guibg=#C2C2C0  
 hi CursorLine                    guibg=#C0f5FF
 hi CursorLineNr    guifg=#000000 guibg=#C0f5FF gui=bold
 hi CursorColumn                  guibg=#C0f5FF
@@ -26,7 +26,7 @@ hi Cursor          guifg=#000000 guibg=#20BBFC
 hi CursorIM        guifg=#000000 guibg=#20BBFC
 hi iCursor         guifg=#000000 guibg=#20BBFC
 " hi Scrollbar         
-" hi Tooltip           
+" hi Tooltip           }}}
 
 hi TabLineFill     guifg=#E0E0E0 guibg=#B0B0B0
 hi TabLine         guifg=#404040 guibg=#E0E0E0 gui=none cterm=none
@@ -53,9 +53,9 @@ hi SpecialKey      guifg=#b5b5b5
 hi SpecialComment  guifg=#b5b5b5               gui=bold
 hi Special         guifg=#0030F0 guibg=bg      gui=bold
 
-hi DiffAdd                       guibg=#c6dca0 
-hi DiffChange                    guibg=#f9ffb0
-hi DiffDelete      guifg=#505050 guibg=#f0c8be
+hi DiffAdd                       guibg=#D8F5C8 
+hi DiffChange                    guibg=#F5F0C8
+hi DiffDelete      guifg=#802020 guibg=#F5D8C8
 hi DiffText                      guibg=#FFFFFF gui=italic,bold
 
 hi MatchParen      guifg=#505000 guibg=#F0F050 gui=bold
@@ -73,13 +73,13 @@ hi ModeMsg         guifg=#605000
 hi MoreMsg         guifg=#605000
 hi Question        guifg=#006EB4
 
-hi Pmenu           guifg=#e5e5e4 guibg=#707065
-hi PmenuSel        guifg=#303030 guibg=#C8C8BE
+hi Pmenu           guifg=#F0F0F0 guibg=#808075
+hi PmenuSel        guifg=#FFFFFF guibg=#005FFF gui=bold
 hi PmenuSbar                     guibg=#404035
 hi PmenuThumb      guifg=#006EB4
 
-hi Search          guifg=#000000 guibg=#FFF060 gui=none
-hi IncSearch       guifg=#000000 guibg=#B0FF20 gui=none
+hi    Search       guifg=#000000 guibg=#E5C5F0 gui=none
+hi IncSearch       guifg=#000000 guibg=#F5F000 gui=none
 
 " spell checking
 if has("spell")
@@ -95,7 +95,10 @@ endif
 hi Debug           guifg=#BCA3A3               gui=bold
 hi Underlined      guifg=#808080               gui=underline
 hi CleverF         guifg=#D000C0 guibg=#FFE0FF
-hi Flashy          guibg=#F0F0C0 ctermbg=229
+
+" yank highlighting
+hi Flashy                  guibg=#FFFF00    ctermbg=228
+hi HighlightedyankRegion   guibg=#FFFF00    ctermbg=228
 
 " indent line plugin
 let g:indentLine_color_term = 253

@@ -12,19 +12,19 @@ endif
 let g:colors_name="amlight"
 
 hi Normal          guifg=#555555 guibg=#F8F8F3
-hi LineNr          guifg=#A8A8A5 guibg=#EBEBE8 
+hi LineNr          guifg=#909090 guibg=#EBEBE8 
 hi SignColumn      guifg=#555555 guibg=#EBEBE8
-hi ColorColumn                   guibg=#EBEBE8
+hi ColorColumn                   guibg=#EFEFEA
 hi FoldColumn      guifg=#707065 guibg=#EBEBE8
-hi CursorLine                    guibg=#E5E5E2
-hi CursorColumn                  guibg=#E5E5E2
-hi CursorLineNr    guifg=#000000 guibg=#E5E5E2 gui=bold
-hi VisualNOS                     guibg=#D5D5D0
-hi Visual                        guibg=#D5D5D0
+hi CursorLine                    guibg=#E0F0F5
+hi CursorColumn                  guibg=#E0F0F5
+hi CursorLineNr    guifg=#000000 guibg=#E0F0F5 gui=bold
+hi VisualNOS                     guibg=#C0E0F0
+hi Visual                        guibg=#C0E0F0
 hi Folded          guifg=#707065 guibg=#C2C2C0
-hi Cursor          guifg=#000000 guibg=#20BBFC
-hi CursorIM        guifg=#000000 guibg=#20BBFC
-hi iCursor         guifg=#000000 guibg=#20BBFC
+hi Cursor          guifg=#000000 guibg=#50C0FC
+hi CursorIM        guifg=#000000 guibg=#50C0FC
+hi iCursor         guifg=#000000 guibg=#50C0FC
 " hi Scrollbar         
 " hi Tooltip           
 
@@ -76,15 +76,15 @@ hi ModeMsg         guifg=#605000
 hi MoreMsg         guifg=#605000
 
 " complete menu
-hi Pmenu           guifg=#D5D5D4 guibg=#707065
-hi PmenuSel        guifg=#505050 guibg=#C8C8BE
+hi Pmenu           guifg=#F0F0F0 guibg=#909085
+hi PmenuSel        guifg=#FFFFFF guibg=#005FFF gui=bold
 hi PmenuSbar                     guibg=#404035
 hi PmenuThumb      guifg=#006EB4
 
 hi Question        guifg=#006EB4
 
-hi    Search       guifg=#000000 guibg=#D0B0E0 gui=none
-hi IncSearch       guifg=#000000 guibg=#EBE18C gui=none
+hi    Search       guifg=#000000 guibg=#E5D0F0 gui=none
+hi IncSearch       guifg=#000000 guibg=#F5F060 gui=none
 
 " spell checking
 if has("spell")
@@ -101,7 +101,10 @@ endif
 hi Debug       guifg=#BCA3A3                            gui=bold
 hi Underlined  guifg=#808080                            gui=underline
 hi CleverF     guifg=NONE     guibg=#AFFF87
-hi Flashy      guibg=#F0F0C0                ctermbg=228
+
+" yank highlighting
+hi Flashy                  guibg=#FAFA90    ctermbg=228
+hi HighlightedyankRegion   guibg=#FAFA90    ctermbg=228
 
 " indent line plugin
 let g:indentLine_color_term = 253
@@ -115,17 +118,17 @@ hi IndentGuidesOdd  guibg=#F8F8F3
 hi BracelessIndent guibg=#E5E5E2 ctermbg=253
 
 " highlight all the lowercase marks
-hi ShowMarksHLl    guifg=#009619 guibg=#D0E6D0 gui=NONE
+hi ShowMarksHLl    guifg=#009619 guibg=#D0F0D0 gui=NONE
 " highlight all the uppercase marks
-hi ShowMarksHLu    guifg=#009619 guibg=#D0E6D0 gui=bold    
+hi ShowMarksHLu    guifg=#009619 guibg=#D0F0D0 gui=bold    
 " highlight all other marks
-hi ShowMarksHLo    guifg=#006EB4 guibg=#EBEBE8 gui=NONE
+hi ShowMarksHLo    guifg=#006EE0 guibg=#EBEBE8 gui=NONE
 " when multiple marks are on the same line
-hi ShowMarksHLm    guifg=#C88200 guibg=#E6E0A0 gui=bold
+hi ShowMarksHLm    guifg=#EAB000 guibg=#E6E0A0 gui=bold
 
 " ALE (Asynchronous Lint Engine)
-hi ALEErrorSign    guifg=#D02000 guibg=#EBEBE8 gui=bold 
-hi ALEWarningSign  guifg=#DAD520 guibg=#EBEBE8 gui=bold
+hi ALEErrorSign    guifg=#D02000 guibg=#F5E0E0 gui=bold 
+hi ALEWarningSign  guifg=#EAC520 guibg=#F5F0D0 gui=bold
 hi ALEError        guifg=NONE    guibg=#FFA0A0 gui=bold
 hi ALEWarning      guifg=NONE    guibg=#FFFFA0 gui=bold
 hi ALEInfo         guifg=NONE    guibg=#A0FFFF gui=NONE 
@@ -133,10 +136,10 @@ hi ALEInfo         guifg=NONE    guibg=#A0FFFF gui=NONE
 " hi ALEStyleWarning  guifg=NONE    guibg=#000000 gui=NONE 
 
 " GitGutter
-hi GitGutterAdd               guifg=#009619 guibg=#EBEBE8 gui=bold
-hi GitGutterChange            guifg=#C88200 guibg=#EBEBE8 gui=bold
-hi GitGutterDelete            guifg=#D30000 guibg=#EBEBE8 gui=bold
-hi GitGutterChangeDelete      guifg=#D30000 guibg=#EBEBE8 gui=bold
+hi GitGutterAdd               guifg=#009619 guibg=#D0F0D0 gui=bold
+hi GitGutterChange            guifg=#EAC520 guibg=#F5F0D0 gui=bold
+hi GitGutterDelete            guifg=#D30000 guibg=#F5E0D0 gui=bold
+hi GitGutterChangeDelete      guifg=#D30000 guibg=#F5E0D0 gui=bold
 
 " multi-cursor
 hi multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
@@ -163,12 +166,12 @@ hi TagbarVisibilityProtected    guifg=#D0C080
 hi TagbarVisibilityPrivate      guifg=#F0A0A0
 
 " find & replace
-hi FNRFind          guifg=#000000 guibg=#B6F22E gui=NONE
+hi FNRFind          guifg=#000000 guibg=#00F220 gui=NONE
 hi FNRReplace       guifg=#000000 guibg=#FDB01F gui=NONE
-hi FNRIndicatorOff  guifg=#F03010 guibg=NONE    gui=NONE
-hi FNRIndicatorOn   guifg=#B6F22E guibg=NONE    gui=bold
-hi FNRActiveMode    guifg=#B6F22E guibg=NONE    gui=bold
-hi FNRActiveFind    guifg=#B6F22E guibg=NONE    gui=bold
+hi FNRIndicatorOff  guifg=#B5B5B0 guibg=NONE    gui=NONE
+hi FNRIndicatorOn   guifg=#0050F0 guibg=NONE    gui=bold
+hi FNRActiveMode    guifg=#0050F0 guibg=NONE    gui=bold
+hi FNRActiveFind    guifg=#00F220 guibg=NONE    gui=bold
 hi FNRActiveReplace guifg=#FDB01F guibg=NONE    gui=bold
 " hi FNRCursor 
 

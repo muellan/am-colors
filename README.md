@@ -11,7 +11,7 @@
 
 ### plugin support:
  - CleverF         
- - Flashy         
+ - HighlightedYank / Flashy         
  - indent line 
  - indent guides
  - braceless 

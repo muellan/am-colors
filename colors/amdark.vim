@@ -19,8 +19,8 @@ hi FoldColumn      guifg=#858575 guibg=#414237
 hi CursorColumn                  guibg=#4B4D40
 hi CursorLine                    guibg=#4B4D40
 hi CursorLineNr    guifg=#FEFEFA guibg=#4B4D40 gui=bold
-hi VisualNOS                     guibg=#646450
-hi Visual                        guibg=#646450
+hi VisualNOS                     guibg=#606050
+hi Visual                        guibg=#606050
 hi Folded          guifg=#858575 guibg=#293025
 hi Cursor          guifg=#000000 guibg=#80E0FB
 hi CursorIM        guifg=#000000 guibg=#80E0FB
@@ -55,9 +55,9 @@ hi SpecialComment  guifg=#7E8E91               gui=bold
 hi Special         guifg=#B487E1 guibg=bg      gui=bold
 hi Delimiter       guifg=#8F8F8F
 
-hi DiffAdd                       guibg=#155000
-hi DiffChange                    guibg=#654500
-hi DiffDelete      guifg=#E04040 guibg=#653530
+hi DiffAdd                       guibg=#205020
+hi DiffChange                    guibg=#605020
+hi DiffDelete      guifg=#FF8080 guibg=#603020
 hi DiffText                      guibg=#4C4745 gui=italic,bold
 
 hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold
@@ -100,7 +100,10 @@ endif
 hi Debug           guifg=#BCA3A3               gui=bold
 hi Underlined      guifg=#808080               gui=underline
 hi CleverF         guifg=#FF00FF               gui=bold
-hi Flashy          guibg=#686865    ctermbg=60
+
+" yank highlighting
+hi Flashy                  guibg=#686865    ctermbg=60
+hi HighlightedyankRegion   guibg=#506080    ctermbg=60
 
 " indent line plugin
 let g:indentLine_color_term = 239
