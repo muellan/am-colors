@@ -16,8 +16,8 @@ hi LineNr          guifg=#858575 guibg=#414237
 hi SignColumn      guifg=#F8F8F2 guibg=#414237
 hi ColorColumn                   guibg=#414237
 hi FoldColumn      guifg=#858575 guibg=#414237
-hi CursorColumn                  guibg=#4B4D40
-hi CursorLine                    guibg=#4B4D40
+hi CursorLine                    guibg=#4B4D40 cterm=none
+hi CursorColumn                  guibg=#4B4D40 cterm=none
 hi CursorLineNr    guifg=#FEFEFA guibg=#4B4D40 gui=bold
 hi VisualNOS                     guibg=#606050
 hi Visual                        guibg=#606050
@@ -115,6 +115,23 @@ hi IndentGuidesOdd  guibg=#3C3D34
 " braceless plugin indent guide
 hi BracelessIndent guibg=#4C4D44 ctermbg=239
 
+" bufexplorer
+hi link bufExplorerBufNbr      Number
+hi link bufExplorerMapping     Special
+hi link bufExplorerHelp        Normal
+hi link bufExplorerOpenIn      Identifier
+hi link bufExplorerSortBy      Title
+hi link bufExplorerSplit       NonText
+hi link bufExplorerTitle       NonText
+hi link bufExplorerActBuf      Identifier
+hi link bufExplorerAltBuf      String
+hi link bufExplorerCurBuf      Type
+hi link bufExplorerHidBuf      Normal
+hi link bufExplorerLockedBuf   Special
+hi link bufExplorerModBuf      Exception
+hi link bufExplorerUnlBuf      Comment
+hi link bufExplorerInactBuf    Comment
+  
 " signify
 " highlight all the lowercase marks
 hi ShowMarksHLl    guifg=#B6F22E guibg=#414237 gui=NONE
@@ -155,11 +172,7 @@ hi link TagbarScope Type
 hi link TagbarType  Structure
 " function signatures
 hi TagbarSignature              guifg=#A0C070
-" The asterisk (*) that signifies a pseudo-tag.
-" hi TagbarPseudoID
 hi TagbarFoldIcon               guifg=#ffffff gui=bold
-" The colour that is used for automatically highlighting the current tag.
-" hi TagbarHighlight
 hi TagbarVisibilityPublic       guifg=#209020
 hi TagbarVisibilityProtected    guifg=#C5A000
 hi TagbarVisibilityPrivate      guifg=#C04040
@@ -172,14 +185,9 @@ hi FNRIndicatorOn   guifg=#D8C8FF guibg=NONE    gui=bold
 hi FNRActiveMode    guifg=#B0A0FF guibg=NONE    gui=bold
 hi FNRActiveFind    guifg=#B6F22E guibg=NONE    gui=bold
 hi FNRActiveReplace guifg=#FDB01F guibg=NONE    gui=bold
-" hi FNRCursor 
 
 " CtrlP
 hi CtrlPMatch       guifg=#B5A5FF
-" hi CtrlPMatch       guifg=#B0E000
-" hi CtrlPMatch       guifg=NONE guibg=#875FD7
-
-" FZF fuzzy finder
 
 " startify start screen
 hi StartifySection  guifg=#ffffff guibg=NONE    gui=bold
@@ -191,7 +199,7 @@ hi StartifyFile     guifg=#FFF064 guibg=NONE
 hi StartifyPath     guifg=#A28262 guibg=NONE    
 hi StartifySlash    guifg=#757055 guibg=NONE    
 hi StartifySpecial  guifg=#FEA020 guibg=NONE    gui=bold
-" hi StartifySelect   guifg=#fff2c0 guibg=#fff060
+hi StartifySelect   guifg=#fff2c0 guibg=#fff060
 
 " poppy.vim (rainbow parentheses)
 hi PoppyLevel1 guibg=#F0961E guifg=#000000 gui=bold
@@ -217,7 +225,7 @@ hi Loop            guifg=#B487E1               gui=bold
 hi Operator        guifg=#F8F8F2
 hi Function        guifg=#F8F8F2               gui=bold
 hi Identifier      guifg=#D2F0CA
-hi Label           guifg=#FF97CB               gui=none
+hi Label           guifg=#F080D0               gui=bold
 
 hi Constant        guifg=#B487E1               gui=bold
 hi Boolean         guifg=#B487E1               gui=bold,italic
@@ -325,13 +333,6 @@ if &t_Co > 255
     hi Directory        ctermfg=155  ctermbg=NONE cterm=bold
     hi ErrorMsg         ctermfg=231  ctermbg=197  cterm=NONE
     hi Exception        ctermfg=147  ctermbg=NONE cterm=bold
-    hi FNRActiveFind    ctermfg=154  ctermbg=NONE cterm=bold
-    hi FNRActiveMode    ctermfg=153  ctermbg=NONE cterm=bold
-    hi FNRActiveReplace ctermfg=214  ctermbg=NONE cterm=bold
-    hi FNRFind          ctermfg=0    ctermbg=154  cterm=NONE
-    hi FNRIndicatorOff  ctermfg=60   ctermbg=NONE cterm=NONE
-    hi FNRIndicatorOn   ctermfg=153  ctermbg=NONE cterm=bold
-    hi FNRReplace       ctermfg=0    ctermbg=214  cterm=NONE
     hi Float            ctermfg=209  ctermbg=NONE cterm=NONE
     hi FoldColumn       ctermfg=102  ctermbg=238  cterm=NONE
     hi Folded           ctermfg=242  ctermbg=235  cterm=NONE
@@ -361,7 +362,6 @@ if &t_Co > 255
     hi ShowMarksHLo     ctermfg=33   ctermbg=238  cterm=NONE
     hi ShowMarksHLu     ctermfg=154  ctermbg=238  cterm=bold
     hi SignColumn       ctermfg=NONE ctermbg=238  cterm=NONE
-    hi Special          ctermfg=147  ctermbg=NONE cterm=bold
     hi Special          ctermfg=231  ctermbg=NONE cterm=NONE
     hi SpecialChar      ctermfg=220  ctermbg=NONE cterm=NONE
     hi SpecialKey       ctermfg=240  ctermbg=NONE cterm=NONE

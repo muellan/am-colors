@@ -1,4 +1,4 @@
-" vim:fdm=marker sw=2 sts=2 ts=2 expandtab
+" vim:fdm=marker sw=1 sts=2 ts=2 expandtab
 
 hi clear
 
@@ -16,8 +16,8 @@ hi LineNr          guifg=#909090 guibg=#EBEBE8
 hi SignColumn      guifg=#555555 guibg=#EBEBE8
 hi ColorColumn                   guibg=#EFEFEA
 hi FoldColumn      guifg=#707065 guibg=#EBEBE8
-hi CursorLine                    guibg=#E0F0F5
-hi CursorColumn                  guibg=#E0F0F5
+hi CursorLine                    guibg=#E0F0F5 cterm=none
+hi CursorColumn                  guibg=#E0F0F5 cterm=none
 hi CursorLineNr    guifg=#000000 guibg=#E0F0F5 gui=bold
 hi VisualNOS                     guibg=#C0E0F0
 hi Visual                        guibg=#C0E0F0
@@ -113,9 +113,25 @@ let g:indentLine_color_gui = '#D0D0CE'
 " indent guides plugin
 hi IndentGuidesEven guibg=#F2F2EC
 hi IndentGuidesOdd  guibg=#F8F8F3
-
 " braceless plugin indent guide
 hi BracelessIndent guibg=#E5E5E2 ctermbg=253
+
+" bufexplorer
+hi link bufExplorerBufNbr      Number
+hi link bufExplorerMapping     Special
+hi link bufExplorerHelp        Normal
+hi link bufExplorerOpenIn      Identifier
+hi link bufExplorerSortBy      Title
+hi link bufExplorerSplit       NonText
+hi link bufExplorerTitle       NonText
+hi link bufExplorerActBuf      Identifier
+hi link bufExplorerAltBuf      String
+hi link bufExplorerCurBuf      Type
+hi link bufExplorerHidBuf      Normal
+hi link bufExplorerLockedBuf   Special
+hi link bufExplorerModBuf      Exception
+hi link bufExplorerUnlBuf      Comment
+hi link bufExplorerInactBuf    Comment
 
 " highlight all the lowercase marks
 hi ShowMarksHLl    guifg=#009619 guibg=#D0F0D0 gui=NONE
@@ -127,8 +143,8 @@ hi ShowMarksHLo    guifg=#006EE0 guibg=#EBEBE8 gui=NONE
 hi ShowMarksHLm    guifg=#EAB000 guibg=#E6E0A0 gui=bold
 
 " ALE (Asynchronous Lint Engine)
-hi ALEErrorSign    guifg=#D02000 guibg=#F5E0E0 gui=bold 
-hi ALEWarningSign  guifg=#EAC520 guibg=#F5F0D0 gui=bold
+hi ALEErrorSign    guifg=#D02000 guibg=#F5D0D0 gui=bold 
+hi ALEWarningSign  guifg=#C58000 guibg=#F5F0D0 gui=bold
 hi ALEError        guifg=NONE    guibg=#FFA0A0 gui=bold
 hi ALEWarning      guifg=NONE    guibg=#FFFFA0 gui=bold
 hi ALEInfo         guifg=NONE    guibg=#A0FFFF gui=NONE 
@@ -214,7 +230,7 @@ hi Loop            guifg=#8C32B4               gui=bold
 hi Operator        guifg=#3C3C3C
 hi Function        guifg=#3C3C3C               gui=bold
 hi Identifier      guifg=#10A000
-hi Label           guifg=#F03278               gui=none
+hi Label           guifg=#F03278               gui=bold
 
 hi Constant        guifg=#8C32B4               gui=bold
 hi Boolean         guifg=#8C32B4               gui=bold,italic
@@ -333,7 +349,6 @@ if &t_Co > 255
     hi Keyword      ctermfg=91   ctermbg=NONE cterm=bold
     hi Exception    ctermfg=91   ctermbg=NONE cterm=bold
     hi Loop         ctermfg=91   ctermbg=NONE cterm=bold
-    hi Special      ctermfg=91   ctermbg=NONE cterm=bold
     hi Constant     ctermfg=91   ctermbg=NONE cterm=bold
     hi Repeat       ctermfg=91   ctermbg=NONE cterm=bold
     hi Statement    ctermfg=91   ctermbg=NONE cterm=bold

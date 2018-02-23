@@ -19,9 +19,9 @@ hi FoldColumn      guifg=#606055 guibg=#EAEAEA
 hi VisualNOS                     guibg=#A0E5FF
 hi Visual                        guibg=#A0E5FF
 hi Folded          guifg=#202020 guibg=#C2C2C0  
-hi CursorLine                    guibg=#C0f5FF
+hi CursorLine                    guibg=#C0f5FF cterm=none
+hi CursorColumn                  guibg=#C0f5FF cterm=none
 hi CursorLineNr    guifg=#000000 guibg=#C0f5FF gui=bold
-hi CursorColumn                  guibg=#C0f5FF
 hi Cursor          guifg=#000000 guibg=#20BBFC
 hi CursorIM        guifg=#000000 guibg=#20BBFC
 hi iCursor         guifg=#000000 guibg=#20BBFC
@@ -52,6 +52,8 @@ hi NonText         guifg=#b5b5b5               gui=NONE
 hi SpecialKey      guifg=#b5b5b5
 hi SpecialComment  guifg=#b5b5b5               gui=bold
 hi Special         guifg=#0030F0 guibg=bg      gui=bold
+
+hi EndOfBuffer     guifg=#808080               gui=NONE
 
 hi DiffAdd                       guibg=#D8F5C8 
 hi DiffChange                    guibg=#F5F0C8
@@ -106,34 +108,50 @@ let g:indentLine_color_gui = '#D0D0CE'
 
 " braceless plugin indent guide
 hi BracelessIndent guibg=#E5E5E2 ctermbg=253
-
 " indent guides plugin
 hi IndentGuidesEven guibg=#F5F5F5
 hi IndentGuidesOdd  guibg=#FFFFFF
 
+" bufexplorer
+hi link bufExplorerBufNbr      Number
+hi link bufExplorerMapping     Special
+hi link bufExplorerHelp        Normal
+hi link bufExplorerOpenIn      Identifier
+hi link bufExplorerSortBy      Title
+hi link bufExplorerSplit       NonText
+hi link bufExplorerTitle       NonText
+hi link bufExplorerActBuf      Identifier
+hi link bufExplorerAltBuf      String
+hi link bufExplorerCurBuf      Type
+hi link bufExplorerHidBuf      Normal
+hi link bufExplorerLockedBuf   Special
+hi link bufExplorerModBuf      Exception
+hi link bufExplorerUnlBuf      Comment
+hi link bufExplorerInactBuf    Comment
+  
 " highlight all the lowercase marks
-hi ShowMarksHLl    guifg=#00B619 guibg=#C0FFC0 gui=NONE
+hi ShowMarksHLl    guifg=#00A000 guibg=#C0FFC0 gui=NONE
 " highlight all the uppercase marks
-hi ShowMarksHLu    guifg=#00B619 guibg=#C0FFC0 gui=bold    
+hi ShowMarksHLu    guifg=#00A000 guibg=#C0FFC0 gui=bold    
 " highlight all other marks
 hi ShowMarksHLo    guifg=#006EFF guibg=#D0E0FF gui=NONE
 " when multiple marks are on the same line
 hi ShowMarksHLm    guifg=#C88200 guibg=#FFF0A0 gui=bold"}}}
 
 " ALE (Asynchronous Lint Engine)
-hi ALEErrorSign    guifg=#D02000 guibg=#EAEAEA gui=bold  
-hi ALEWarningSign  guifg=#DAD520 guibg=#EAEAEA gui=bold
-hi ALEError        guifg=NONE    guibg=#FF8080 gui=bold
-hi ALEWarning      guifg=NONE    guibg=#FFFF80 gui=bold
-hi ALEInfo         guifg=NONE    guibg=#80FFFF gui=NONE 
+hi ALEErrorSign    guifg=#E00000 guibg=#FFC0C0 gui=bold 
+hi ALEWarningSign  guifg=#906000 guibg=#F5F000 gui=bold
+hi ALEError        guifg=NONE    guibg=#FFC0C0 gui=bold
+hi ALEWarning      guifg=NONE    guibg=#FFFFA0 gui=bold
+hi ALEInfo         guifg=NONE    guibg=#A0FFFF gui=NONE 
 " hi ALEStyleError    guifg=NONE    guibg=#000000 gui=NONE  
 " hi ALEStyleWarning  guifg=NONE    guibg=#000000 gui=NONE 
 
 " GitGutter
-hi GitGutterAdd               guifg=#00B000 guibg=#EAEAEA gui=bold
-hi GitGutterChange            guifg=#E0A000 guibg=#EAEAEA gui=bold
-hi GitGutterDelete            guifg=#F00000 guibg=#EAEAEA gui=bold
-hi GitGutterChangeDelete      guifg=#F00000 guibg=#EAEAEA gui=bold
+hi GitGutterAdd               guifg=#009000 guibg=#C0F0C0 gui=bold
+hi GitGutterChange            guifg=#906000 guibg=#F5F000 gui=bold
+hi GitGutterDelete            guifg=#E00000 guibg=#FFC0C0 gui=bold
+hi GitGutterChangeDelete      guifg=#E00000 guibg=#FFC0C0 gui=bold
 
 " multi-cursor
 hi multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
@@ -196,7 +214,7 @@ hi Loop            guifg=#0030F0               gui=bold
 hi Operator        guifg=#000000
 hi Function        guifg=#000000               gui=bold
 hi Identifier      guifg=#800090
-hi Label           guifg=#A0D000
+hi Label           guifg=#0070D0               gui=bold
 
 hi Constant        guifg=#0030F0               gui=bold
 hi Boolean         guifg=#0030F0               gui=bold,italic
@@ -306,7 +324,6 @@ if &t_Co > 255
     hi Float           ctermfg=160  ctermbg=NONE cterm=NONE
     hi Character       ctermfg=94  ctermbg=NONE cterm=NONE
     hi SpecialChar     ctermfg=130  ctermbg=NONE cterm=NONE
-    hi SpecialKey      ctermfg=129  ctermbg=NONE cterm=NONE
     hi String          ctermfg=160  ctermbg=NONE cterm=NONE
     hi Number          ctermfg=22  ctermbg=NONE cterm=NONE
     hi Conceal         ctermfg=253  ctermbg=255  cterm=NONE
@@ -320,7 +337,6 @@ if &t_Co > 255
     hi Keyword         ctermfg=91  ctermbg=NONE cterm=bold
     hi Exception       ctermfg=91  ctermbg=NONE cterm=bold
     hi Loop            ctermfg=91  ctermbg=NONE cterm=bold
-    hi Special         ctermfg=91  ctermbg=NONE cterm=bold
     hi Constant        ctermfg=91  ctermbg=NONE cterm=bold
     hi Repeat          ctermfg=91  ctermbg=NONE cterm=bold
     hi Statement       ctermfg=91  ctermbg=NONE cterm=bold
