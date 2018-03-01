@@ -8,6 +8,8 @@
    combines amlight and amdark
  - ampresent.vim:
    light vim colorscheme optimized for presentations
+ - amblack.vim:
+   dark vim colorscheme optimized for presentations
 
 ### plugin support:
  - CleverF         
@@ -20,11 +22,8 @@
  - GitGutter
  - multi-cursor
  - tagbar
- - find & replace
  - CtrlP
- - startify 
  - poppy
- - easytags
 
 ### special file type support
  - xml

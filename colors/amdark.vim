@@ -152,10 +152,10 @@ hi ALEInfo          guifg=#A0FFFF guibg=#000060 gui=NONE
 " hi ALEStyleWarning  guifg=NONE    guibg=#000000 gui=NONE 
 
 " GitGutter
-hi GitGutterAdd               guifg=#B6F22E guibg=#414237 gui=bold
-hi GitGutterChange            guifg=#EAE530 guibg=#414237 gui=bold
-hi GitGutterDelete            guifg=#F03010 guibg=#414237 gui=bold
-hi GitGutterChangeDelete      guifg=#F03010 guibg=#414237 gui=bold
+hi GitGutterAdd           guifg=#B6F22E guibg=#414237 gui=bold
+hi GitGutterChange        guifg=#EAE530 guibg=#414237 gui=bold
+hi GitGutterDelete        guifg=#F03010 guibg=#414237 gui=bold
+hi GitGutterChangeDelete  guifg=#F03010 guibg=#414237 gui=bold
 
 " multi-cursor
 hi link multiple_cursors_visual Visual
@@ -177,29 +177,29 @@ hi TagbarVisibilityPublic       guifg=#209020
 hi TagbarVisibilityProtected    guifg=#C5A000
 hi TagbarVisibilityPrivate      guifg=#C04040
 
-" find & replace
-hi FNRFind          guifg=#000000 guibg=#B6F22E gui=NONE
-hi FNRReplace       guifg=#000000 guibg=#FDB01F gui=NONE
-hi FNRIndicatorOff  guifg=#9585A5 guibg=NONE    gui=NONE
-hi FNRIndicatorOn   guifg=#D8C8FF guibg=NONE    gui=bold
-hi FNRActiveMode    guifg=#B0A0FF guibg=NONE    gui=bold
-hi FNRActiveFind    guifg=#B6F22E guibg=NONE    gui=bold
-hi FNRActiveReplace guifg=#FDB01F guibg=NONE    gui=bold
+" " find & replace
+" hi FNRFind          guifg=#000000 guibg=#B6F22E gui=NONE
+" hi FNRReplace       guifg=#000000 guibg=#FDB01F gui=NONE
+" hi FNRIndicatorOff  guifg=#9585A5 guibg=NONE    gui=NONE
+" hi FNRIndicatorOn   guifg=#D8C8FF guibg=NONE    gui=bold
+" hi FNRActiveMode    guifg=#B0A0FF guibg=NONE    gui=bold
+" hi FNRActiveFind    guifg=#B6F22E guibg=NONE    gui=bold
+" hi FNRActiveReplace guifg=#FDB01F guibg=NONE    gui=bold
 
 " CtrlP
 hi CtrlPMatch       guifg=#B5A5FF
 
-" startify start screen
-hi StartifySection  guifg=#ffffff guibg=NONE    gui=bold
-hi StartifyHeader   guifg=#bbb0a0 guibg=NONE    
-hi StartifyFooter   guifg=#bbb0a0 guibg=NONE    
-hi StartifyBracket  guifg=#B04040 guibg=NONE    
-hi StartifyNumber   guifg=#FF7038 guibg=NONE    
-hi StartifyFile     guifg=#FFF064 guibg=NONE    
-hi StartifyPath     guifg=#A28262 guibg=NONE    
-hi StartifySlash    guifg=#757055 guibg=NONE    
-hi StartifySpecial  guifg=#FEA020 guibg=NONE    gui=bold
-hi StartifySelect   guifg=#fff2c0 guibg=#fff060
+" " startify start screen
+" hi StartifySection  guifg=#ffffff guibg=NONE    gui=bold
+" hi StartifyHeader   guifg=#bbb0a0 guibg=NONE    
+" hi StartifyFooter   guifg=#bbb0a0 guibg=NONE    
+" hi StartifyBracket  guifg=#B04040 guibg=NONE    
+" hi StartifyNumber   guifg=#FF7038 guibg=NONE    
+" hi StartifyFile     guifg=#FFF064 guibg=NONE    
+" hi StartifyPath     guifg=#A28262 guibg=NONE    
+" hi StartifySlash    guifg=#757055 guibg=NONE    
+" hi StartifySpecial  guifg=#FEA020 guibg=NONE    gui=bold
+" hi StartifySelect   guifg=#fff2c0 guibg=#fff060
 
 " poppy.vim (rainbow parentheses)
 hi PoppyLevel1 guibg=#F0961E guifg=#000000 gui=bold
@@ -248,12 +248,12 @@ hi Define          guifg=#FA508C               gui=bold
 hi Macro           guifg=#F286DD               
 
 " easytags
-hi      cMember       guifg=#50dc82
-hi      cMemberTag    guifg=#50dc82 
-hi link cTypeTag      Type
-hi link cEnumTag      Type
-hi link cPreProcTag   PreProc
-hi link cFunctionTag  Function 
+" hi      cMember       guifg=#50dc82
+" hi      cMemberTag    guifg=#50dc82 
+" hi link cTypeTag      Type
+" hi link cEnumTag      Type
+" hi link cPreProcTag   PreProc
+" hi link cFunctionTag  Function 
 
 " C++ semantic highlighting
 " hi      occurrences        guifg=NONE     guibg=#407030

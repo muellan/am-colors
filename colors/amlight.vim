@@ -152,10 +152,10 @@ hi ALEInfo         guifg=NONE    guibg=#A0FFFF gui=NONE
 " hi ALEStyleWarning  guifg=NONE    guibg=#000000 gui=NONE 
 
 " GitGutter
-hi GitGutterAdd               guifg=#009619 guibg=#D0F0D0 gui=bold
-hi GitGutterChange            guifg=#EAC520 guibg=#F5F0D0 gui=bold
-hi GitGutterDelete            guifg=#D30000 guibg=#F5E0D0 gui=bold
-hi GitGutterChangeDelete      guifg=#D30000 guibg=#F5E0D0 gui=bold
+hi GitGutterAdd           guifg=#009619 guibg=#D0F0D0 gui=bold
+hi GitGutterChange        guifg=#EAC520 guibg=#F5F0D0 gui=bold
+hi GitGutterDelete        guifg=#D30000 guibg=#F5E0D0 gui=bold
+hi GitGutterChangeDelete  guifg=#D30000 guibg=#F5E0D0 gui=bold
 
 " multi-cursor
 hi multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
@@ -181,30 +181,28 @@ hi TagbarVisibilityPublic       guifg=#80D080
 hi TagbarVisibilityProtected    guifg=#D0C080
 hi TagbarVisibilityPrivate      guifg=#F0A0A0
 
-" find & replace
-hi FNRFind          guifg=#000000 guibg=#00F220 gui=NONE
-hi FNRReplace       guifg=#000000 guibg=#FDB01F gui=NONE
-hi FNRIndicatorOff  guifg=#B5B5B0 guibg=NONE    gui=NONE
-hi FNRIndicatorOn   guifg=#0050F0 guibg=NONE    gui=bold
-hi FNRActiveMode    guifg=#0050F0 guibg=NONE    gui=bold
-hi FNRActiveFind    guifg=#00F220 guibg=NONE    gui=bold
-hi FNRActiveReplace guifg=#FDB01F guibg=NONE    gui=bold
-" hi FNRCursor 
+" " find & replace
+" hi FNRFind          guifg=#000000 guibg=#00F220 gui=NONE
+" hi FNRReplace       guifg=#000000 guibg=#FDB01F gui=NONE
+" hi FNRIndicatorOff  guifg=#B5B5B0 guibg=NONE    gui=NONE
+" hi FNRIndicatorOn   guifg=#0050F0 guibg=NONE    gui=bold
+" hi FNRActiveMode    guifg=#0050F0 guibg=NONE    gui=bold
+" hi FNRActiveFind    guifg=#00F220 guibg=NONE    gui=bold
+" hi FNRActiveReplace guifg=#FDB01F guibg=NONE    gui=bold
 
 " CtrlP
 hi CtrlPMatch       guifg=NONE guibg=#afff87
 
-" startify start screen
-hi StartifySection  guifg=#000000 guibg=NONE    gui=bold
-hi StartifyHeader   guifg=#808080 guibg=NONE    
-hi StartifyFooter   guifg=#808080 guibg=NONE    
-hi StartifyBracket  guifg=#E0C0C5 guibg=NONE    
-hi StartifyNumber   guifg=#C02070 guibg=NONE    
-hi StartifyFile     guifg=#2030D0 guibg=NONE    
-hi StartifyPath     guifg=#80A0E0 guibg=NONE    
-hi StartifySlash    guifg=#90C0F0 guibg=NONE    
-hi StartifySpecial  guifg=#D23296 guibg=NONE    gui=bold
-" hi StartifySelect   guifg=#FFF2C0 guibg=#FFF060
+" " startify start screen
+" hi StartifySection  guifg=#000000 guibg=NONE    gui=bold
+" hi StartifyHeader   guifg=#808080 guibg=NONE    
+" hi StartifyFooter   guifg=#808080 guibg=NONE    
+" hi StartifyBracket  guifg=#E0C0C5 guibg=NONE    
+" hi StartifyNumber   guifg=#C02070 guibg=NONE    
+" hi StartifyFile     guifg=#2030D0 guibg=NONE    
+" hi StartifyPath     guifg=#80A0E0 guibg=NONE    
+" hi StartifySlash    guifg=#90C0F0 guibg=NONE    
+" hi StartifySpecial  guifg=#D23296 guibg=NONE    gui=bold
 
 " poppy.vim (rainbow parentheses)
 hi PoppyLevel1 guibg=#F0C8BE guifg=#C00000 gui=bold

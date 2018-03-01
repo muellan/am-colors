@@ -177,15 +177,6 @@ hi TagbarVisibilityPublic       guifg=#00E520
 hi TagbarVisibilityProtected    guifg=#F0B000
 hi TagbarVisibilityPrivate      guifg=#F00000
 
-" find & replace
-hi FNRFind          guifg=#000000 guibg=#B6F22E gui=NONE
-hi FNRReplace       guifg=#000000 guibg=#FDB01F gui=NONE
-hi FNRIndicatorOff  guifg=#F03010 guibg=NONE    gui=NONE
-hi FNRIndicatorOn   guifg=#B6F22E guibg=NONE    gui=bold
-hi FNRActiveMode    guifg=#B6F22E guibg=#46620E gui=bold
-hi FNRActiveFind    guifg=#B6F22E guibg=#46620E gui=bold
-hi FNRActiveReplace guifg=#FDB01F guibg=#76520E gui=bold
-
 " CtrlP
 hi CtrlPMatch       guifg=#3000F0
 
@@ -236,21 +227,8 @@ hi Define          guifg=#A020A0               gui=bold
 hi Macro           guifg=#A02080               
 hi link cInluded Include
 
-" easytags
-hi      cMember       guifg=#9500D5    
-hi      cMemberTag    guifg=#9000D5   
-hi link cTypeTag      Type
-hi link cEnumTag      Type
-hi link cPreProcTag   PreProc
-hi link cFunctionTag  Function 
-
 " xml
 hi xmlAttrib    guifg=#007000
-" hi xmlNamespace guifg=#  guibg=#  gui=# 
-" hi xmlString    guifg=#  guibg=#  gui=# 
-" hi xmlRegion    guifg=#  guibg=#  gui=# 
-" hi xmlEntity    guifg=#  guibg=#  gui=# 
-" hi xmlCdata     guifg=#  guibg=#  gui=# 
 hi link xmlTag Keyword
 hi link xmlTagName Keyword  
 hi link xmlEndTag xmlTag
@@ -289,89 +267,6 @@ hi link mmaBracket      Normal
 hi link mmaTodo         Todo
 hi link mmaMessage      Type
 hi link mmaSlot         Include
-" }}}
-
-
-" --------------------------------------------------------------------
-" {{{ terminal colors
-" --------------------------------------------------------------------
-if &t_Co > 255
-    hi Cursor          ctermfg=232  ctermbg=45  cterm=NONE
-    hi Visual          ctermfg=NONE ctermbg=187   cterm=NONE
-    hi CursorLine      ctermfg=NONE ctermbg=254  cterm=NONE
-    hi CursorColumn    ctermfg=NONE ctermbg=254  cterm=NONE
-    hi ColorColumn     ctermfg=NONE ctermbg=254  cterm=NONE
-    hi LineNr          ctermfg=246  ctermbg=253  cterm=NONE
-    hi CursorLineNr    ctermfg=0    ctermbg=254  cterm=bold
-    hi VertSplit       ctermfg=247  ctermbg=247  cterm=NONE
-
-    hi StatusLine      ctermfg=231  ctermbg=241  cterm=bold
-    hi StatusLineNC    ctermfg=231  ctermbg=241  cterm=NONE
-    hi Pmenu           ctermfg=243  ctermbg=253  cterm=NONE
-    hi PmenuSel        ctermfg=232  ctermbg=250   cterm=NONE
-    hi PmenuSbar       ctermfg=243  ctermbg=250
-
-    hi MatchParen      ctermfg=0    ctermbg=215  cterm=NONE
-    hi IncSearch       ctermfg=0  ctermbg=153  cterm=NONE
-    hi Search          ctermfg=NONE ctermbg=NONE cterm=underline
-
-    hi Directory       ctermfg=28  ctermbg=NONE cterm=bold
-    hi Folded          ctermfg=30  ctermbg=152  cterm=NONE
-
-    hi Normal          ctermfg=0  ctermbg=15  cterm=NONE
-    hi Comment         ctermfg=100  ctermbg=NONE cterm=NONE
-    hi Boolean         ctermfg=22  ctermbg=NONE cterm=NONE
-    hi Float           ctermfg=160  ctermbg=NONE cterm=NONE
-    hi Character       ctermfg=94  ctermbg=NONE cterm=NONE
-    hi SpecialChar     ctermfg=130  ctermbg=NONE cterm=NONE
-    hi String          ctermfg=160  ctermbg=NONE cterm=NONE
-    hi Number          ctermfg=22  ctermbg=NONE cterm=NONE
-    hi Conceal         ctermfg=253  ctermbg=255  cterm=NONE
-
-    hi Type            ctermfg=4   ctermbg=NONE cterm=NONE
-    hi Typedef         ctermfg=4   ctermbg=NONE cterm=NONE
-    hi StorageClass    ctermfg=4   ctermbg=NONE cterm=bold
-    hi Structure       ctermfg=4   ctermbg=NONE cterm=bold
-
-    hi Conditional     ctermfg=91  ctermbg=NONE cterm=bold
-    hi Keyword         ctermfg=91  ctermbg=NONE cterm=bold
-    hi Exception       ctermfg=91  ctermbg=NONE cterm=bold
-    hi Loop            ctermfg=91  ctermbg=NONE cterm=bold
-    hi Constant        ctermfg=91  ctermbg=NONE cterm=bold
-    hi Repeat          ctermfg=91  ctermbg=NONE cterm=bold
-    hi Statement       ctermfg=91  ctermbg=NONE cterm=bold
-    hi Tag             ctermfg=91  ctermbg=NONE cterm=bold
-    hi Function        ctermfg=231  ctermbg=NONE cterm=bold
-    hi Identifier      ctermfg=148  ctermbg=NONE cterm=NONE
-    hi Label           ctermfg=186  ctermbg=NONE cterm=NONE
-    hi Operator        ctermfg=231  ctermbg=NONE cterm=NONE
-
-    hi Define          ctermfg=126  ctermbg=NONE cterm=NONE
-    hi PreProc         ctermfg=126  ctermbg=NONE cterm=bold
-    hi PreCondit       ctermfg=126  ctermbg=NONE cterm=bold
-    hi Macro           ctermfg=89   ctermbg=NONE cterm=NONE
-
-    hi NonText         ctermfg=242 ctermbg=NONE cterm=NONE
-    hi SpecialKey      ctermfg=242 ctermbg=NONE cterm=NONE
-    hi ErrorMsg        ctermfg=231  ctermbg=197  cterm=NONE
-    hi WarningMsg      ctermfg=231  ctermbg=197  cterm=NONE
-    hi Special         ctermfg=231  ctermbg=NONE cterm=NONE
-    hi Tag             ctermfg=161  ctermbg=NONE cterm=NONE
-    hi Title           ctermfg=232  ctermbg=NONE cterm=bold
-    hi Underlined      ctermfg=NONE ctermbg=NONE cterm=underline
-    hi Todo            ctermfg=95   ctermbg=NONE cterm=inverse,bold
-
-    hi DiffAdd         ctermfg=232  ctermbg=114   cterm=NONE
-    hi DiffDelete      ctermfg=88   ctermbg=NONE cterm=NONE
-    hi DiffChange      ctermfg=NONE ctermbg=NONE cterm=NONE
-    hi DiffText        ctermfg=232  ctermbg=195   cterm=NONE
-
-    hi SignColumn      ctermfg=NONE ctermbg=251  cterm=NONE
-    hi ShowMarksHLl    ctermfg=28  ctermbg=251  cterm=NONE
-    hi ShowMarksHLu    ctermfg=28  ctermbg=251  cterm=bold    
-    hi ShowMarksHLo    ctermfg=25   ctermbg=251  cterm=NONE
-    hi ShowMarksHLm    ctermfg=94  ctermbg=251  cterm=bold
-endif
 " }}}
 
 
