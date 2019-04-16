@@ -11,9 +11,9 @@ endif
 
 let g:colors_name="amlight"
 
-hi Normal          guifg=#555555 guibg=#F8F8F3
-hi LineNr          guifg=#909090 guibg=#EBEBE8 
-hi SignColumn      guifg=#555555 guibg=#EBEBE8
+hi Normal          guifg=#555550 guibg=#F8F8F3
+hi LineNr          guifg=#909085 guibg=#EBEBE8 
+hi SignColumn      guifg=#555550 guibg=#EBEBE8
 hi ColorColumn                   guibg=#EFEFEA
 hi FoldColumn      guifg=#707065 guibg=#EBEBE8
 hi CursorLine                    guibg=#E0F0F5 cterm=none
@@ -29,23 +29,31 @@ hi iCursor         guifg=#000000 guibg=#50C0FC
 " hi Tooltip           
 
 hi TabLineFill     guifg=#B4B4AA guibg=#B4B4AA
-hi TabLine         guibg=#B4B4AA guifg=#404040 gui=none cterm=none
-hi TabLineSel      guibg=#005FFF guifg=#FFFFFF gui=none cterm=none
+hi TabLine         guibg=#B4B4AA guifg=#606055 gui=none cterm=none
+hi TabLineSel      guibg=#F8F8F3 guifg=#000000 gui=none cterm=none
 
-hi StatusLine      guifg=#005FFF guibg=#AFFFFF gui=none cterm=none
-hi StatusLineNC    guifg=#EBEBE8 guibg=#707065 gui=none cterm=none
-hi User1           guifg=#FFFFFF guibg=#005FFF gui=none cterm=none
-hi User2           guifg=#000087 guibg=#00DFFF gui=none cterm=none
-hi User3           guifg=#005FFF guibg=#AFFFFF gui=none cterm=none
-hi User4           guifg=#900000 guibg=#AFFFFF gui=none cterm=none
+hi StatusLine      guifg=#FFFFFF guibg=#B0B0AA gui=none cterm=none
+hi StatusLineNC    guifg=#FFFFFF guibg=#D0D0CA gui=none cterm=none
+hi User1           guifg=#E0E0DA guibg=#B0B0AA gui=bold
+hi User2           guifg=#E0E0DA guibg=#B0B0AA gui=none cterm=none
+hi User3           guifg=#FFD0D0 guibg=#B0B0AA gui=none cterm=none
+hi User4           guifg=#FFF080 guibg=#B0B0AA gui=none cterm=none
+hi User5           guifg=#808075 guibg=#B0B0AA gui=none cterm=none
+
+
+hi StatusLine      guifg=#202015 guibg=#B0B0AA gui=none cterm=none
+hi StatusLineNC    guifg=#808075 guibg=#D0D0CA gui=none cterm=none
+hi User1           guifg=#808075 guibg=#B0B0AA gui=bold
+hi User2           guifg=#808075 guibg=#B0B0AA gui=none cterm=none
+hi User3           guifg=#D00000 guibg=#B0B0AA gui=none cterm=none
+hi User4           guifg=#707000 guibg=#B0B0AA gui=none cterm=none
+hi User5           guifg=#808075 guibg=#B0B0AA gui=bold
 
 hi QuickFixLine    guifg=#000000 guibg=#C0C0A6
 
 " hi Menu              
-hi WildMenu        guifg=#FFFFFF guibg=#005FFF gui=bold
-hi VertSplit       guifg=#808080 guibg=NONE    gui=bold
-
-hi Delimiter       guifg=#8F8F8F
+hi WildMenu        guifg=#FFFFFF guibg=#404035 gui=bold
+hi VertSplit       guifg=#808075 guibg=NONE    gui=bold
 
 hi DiffAdd                       guibg=#D8F5C8 
 hi DiffChange                    guibg=#F5F0C8
@@ -54,20 +62,23 @@ hi DiffText                      guibg=#E0E0DC gui=italic,bold
 
 hi MatchParen      guifg=#C00000 guibg=#F0C8BE gui=bold
 hi MatchError      guifg=#FFFFFF guibg=#C000C0
+hi MatchWord       guifg=#C00000 guibg=#F0C8BE gui=bold
 
-hi NonText         guifg=#C0C0C0               gui=NONE
-hi EndOfBuffer     guifg=#C0C0C0               gui=NONE
-hi SpecialComment  guifg=#C0C0C0               gui=bold
-hi SpecialKey      guifg=#C0C0C0              
+hi Delimiter       guifg=#8F8F8F
+hi Ignore          guifg=#707065 guibg=bg
+hi Conceal         guibg=#D0D0D0 
+hi NonText         guifg=#D0D0D0               gui=NONE
+hi SpecialKey      guifg=#D0D0D0 guibg=bg     
+hi Special         guifg=#8C32B4               gui=bold
+hi SpecialComment  guifg=#D0D0D0               gui=bold
+
+hi EndOfBuffer     guifg=#D0D0D0               gui=NONE
 
 hi Tag             guifg=#8c32b4               gui=italic
 hi Title           guifg=#E04000               gui=bold
 hi Todo            guifg=#A09B6B guibg=bg      gui=bold
 
 hi Directory       guifg=#108010               gui=bold
-
-hi Ignore          guifg=#707065 guibg=bg
-hi Conceal         guifg=#404040
 
 hi Error           guifg=#D30000 guibg=#F0C8BE
 hi ErrorMsg        guifg=#D30000 guibg=#F0C8BE 
@@ -77,14 +88,16 @@ hi MoreMsg         guifg=#605000
 
 " complete menu
 hi Pmenu           guifg=#F0F0F0 guibg=#909085
-hi PmenuSel        guifg=#FFFFFF guibg=#005FFF gui=bold
-hi PmenuSbar                     guibg=#404035
-hi PmenuThumb      guifg=#006EB4
+hi PmenuSel        guifg=#FFFFFF guibg=#404035 gui=bold
+hi PmenuSbar                     guibg=#707065
+hi PmenuThumb      guifg=#404035 guibg=#404035
 
 hi Question        guifg=#006EB4
 
-hi    Search       guifg=#000000 guibg=#E5D0F0 gui=none
-hi IncSearch       guifg=#000000 guibg=#F5F060 gui=none
+" hi    Search       guifg=#000000 guibg=#E5D0F0 gui=none
+" hi IncSearch       guifg=#000000 guibg=#F5F060 gui=none
+hi    Search       guifg=#000000 guibg=#F5F080 gui=none
+hi IncSearch       guifg=#000000 guibg=#A0F550 gui=none
 
 " spell checking
 if has("spell")
@@ -115,6 +128,9 @@ hi IndentGuidesEven guibg=#F2F2EC
 hi IndentGuidesOdd  guibg=#F8F8F3
 " braceless plugin indent guide
 hi BracelessIndent guibg=#E5E5E2 ctermbg=253
+
+" netrw
+hi netrwExe guifg=#555555 guibg=#F8F8F3 gui=NONE cterm=NONE
 
 " bufexplorer
 hi link bufExplorerBufNbr      Number
@@ -181,7 +197,7 @@ hi TagbarVisibilityPublic       guifg=#80D080
 hi TagbarVisibilityProtected    guifg=#D0C080
 hi TagbarVisibilityPrivate      guifg=#F0A0A0
 
-" " find & replace
+" find & replace
 " hi FNRFind          guifg=#000000 guibg=#00F220 gui=NONE
 " hi FNRReplace       guifg=#000000 guibg=#FDB01F gui=NONE
 " hi FNRIndicatorOff  guifg=#B5B5B0 guibg=NONE    gui=NONE
@@ -193,7 +209,7 @@ hi TagbarVisibilityPrivate      guifg=#F0A0A0
 " CtrlP
 hi CtrlPMatch       guifg=NONE guibg=#afff87
 
-" " startify start screen
+" startify start screen
 " hi StartifySection  guifg=#000000 guibg=NONE    gui=bold
 " hi StartifyHeader   guifg=#808080 guibg=NONE    
 " hi StartifyFooter   guifg=#808080 guibg=NONE    
@@ -250,13 +266,41 @@ hi cInclude        guifg=#D23296               gui=bold
 hi Define          guifg=#D23296               gui=bold
 hi Macro           guifg=#C02070               
 
-" easytags
-hi      cMember       guifg=#009614
-hi      cMemberTag    guifg=#009614 
-hi link cTypeTag      Type
-hi link cEnumTag      Type
-hi link cPreProcTag   PreProc
-hi link cFunctionTag  Function 
+hi Namespace       guifg=#8E9DA0               gui=italic
+
+" C++ semantic highlighting
+" guifg=NONE guibg=#407030
+" hi clighter8MemberRef                 guifg=#107010
+" hi clighter8Namespace                 guifg=#6E7D82 gui=italic
+" hi clighter8NamespaceRef              guifg=#6E7D82 gui=italic
+" hi clighter8ParmDecl                  guifg=#509600
+" hi clighter8TemplateTypeParameter     guifg=#E08000 gui=italic
+" hi clighter8ClassDecl                 Identifier
+" hi clighter8ClassTemplate             Identifier
+" hi clighter8Constructor               Identifier
+" hi clighter8CxxMethod                 Identifier
+" hi clighter8Decl                      Identifier
+" hi clighter8DeclRefExpr               Type
+" hi clighter8Destructor                Identifier
+" hi clighter8EnumConstantDecl          Constant
+" hi clighter8EnumDecl                  Identifier
+" hi clighter8FieldDecl                 Identifier
+" hi clighter8FunctionDecl              Identifier
+" hi clighter8FunctionTemplate          Identifier
+" hi clighter8InclusionDirective        cIncluded
+" hi clighter8MacroInstantiation        Constant
+" hi clighter8MemberRefExpr             Type
+" hi clighter8Prepro                    PreProc
+" hi clighter8Ref                       Type
+" hi clighter8Stat                      Keyword
+" hi clighter8StructDecl                Identifier
+" hi clighter8TemplateNoneTypeParameter Identifier
+" hi clighter8TemplateRef               Type
+" hi clighter8TypeRef                   Type
+" hi clighter8TypedefDecl               Identifier
+" hi clighter8UnionDecl                 Identifier
+" hi clighter8Usage                     IncSearch
+" hi clighter8VarDecl                   Identifier
 
 " xml
 hi      xmlAttrib   guifg=#509600
@@ -378,10 +422,6 @@ if &t_Co > 255
     hi ShowMarksHLm ctermfg=94   ctermbg=251  cterm=bold
 endif
 " }}}
-
-if has("win32") || has("win16") || has("win64")
-    let &colorcolumn=join(range(81,999),",")
-endif
 
 " Must be at the end, because of ctermbg=234 bug.
 set background=light

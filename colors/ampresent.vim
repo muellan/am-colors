@@ -11,7 +11,7 @@ endif
 
 let g:colors_name="ampresent"
 
-hi Normal          guifg=#000000 guibg=#FFFFFF"{{{
+hi Normal          guifg=#000000 guibg=#FFFFFF
 hi ColorColumn                   guibg=#F5F5F5
 hi LineNr          guifg=#808080 guibg=#EAEAEA
 hi SignColumn      guifg=#555555 guibg=#EAEAEA
@@ -26,32 +26,33 @@ hi Cursor          guifg=#000000 guibg=#20BBFC
 hi CursorIM        guifg=#000000 guibg=#20BBFC
 hi iCursor         guifg=#000000 guibg=#20BBFC
 " hi Scrollbar         
-" hi Tooltip           }}}
+" hi Tooltip           
 
-hi TabLineFill     guifg=#E0E0E0 guibg=#B0B0B0
-hi TabLine         guifg=#404040 guibg=#E0E0E0 gui=none cterm=none
-hi TabLineSel      guifg=#FFFFFF guibg=#005FFF gui=none cterm=none
+hi TabLineFill     guifg=#B0B0B0 guibg=#B0B0B0
+hi TabLine         guifg=#505050 guibg=#B0B0B0 gui=none cterm=none
+hi TabLineSel      guifg=#000000 guibg=#FFFFFF gui=none cterm=none
 
-hi StatusLine      guifg=#005FFF guibg=#AFFFFF gui=none cterm=none
-hi StatusLineNC    guifg=#deded9 guibg=#87877D gui=none cterm=none
-hi User1           guifg=#FFFFFF guibg=#005FFF gui=bold
-hi User2           guifg=#000087 guibg=#00DFFF gui=none cterm=none
-hi User3           guifg=#005FFF guibg=#AFFFFF gui=none cterm=none
-hi User3           guifg=#005FFF guibg=#AFFFFF gui=none cterm=none
+hi StatusLine      guifg=#202020 guibg=#B0B0B0 gui=none cterm=none
+hi StatusLineNC    guifg=#808080 guibg=#D0D0D0 gui=none cterm=none
+hi User1           guifg=#808080 guibg=#B0B0B0 gui=bold
+hi User2           guifg=#808080 guibg=#B0B0B0 gui=none cterm=none
+hi User3           guifg=#D00000 guibg=#B0B0B0 gui=none cterm=none
+hi User4           guifg=#707000 guibg=#B0B0B0 gui=none cterm=none
+hi User5           guifg=#808075 guibg=#B0B0B0 gui=bold
 
 hi QuickFixLine    guifg=#000000 guibg=#00DFFF gui=bold
 
 " hi Menu              
-hi WildMenu        guifg=#FFFFFF guibg=#005FFF gui=bold
+hi WildMenu        guifg=#FFFFFF guibg=#404040 gui=bold
 hi VertSplit       guifg=#808080 guibg=NONE    gui=bold
 
 hi Delimiter       guifg=#8F8F8F
 hi Ignore          guifg=#87877D guibg=bg
-hi Conceal         guifg=#404040
-hi NonText         guifg=#b5b5b5               gui=NONE
-hi SpecialKey      guifg=#b5b5b5
-hi SpecialComment  guifg=#b5b5b5               gui=bold
-hi Special         guifg=#0030F0 guibg=bg      gui=bold
+hi Conceal         guibg=#C0C0C0
+hi NonText         guifg=#C0C0C0
+hi SpecialKey      guifg=#C0C0C0 guibg=bg
+hi Special         guifg=#0030F0               gui=bold
+hi SpecialComment  guifg=#C0C0C0
 
 hi EndOfBuffer     guifg=#808080               gui=NONE
 
@@ -64,8 +65,9 @@ hi MatchParen      guifg=#505000 guibg=#F0F050 gui=bold
 hi MatchError      guifg=#FFFFFF guibg=#c000c0
 
 hi Tag             guifg=#0030F0               gui=italic
-hi Title           guifg=#ef5939
+hi Title           guifg=#D00000
 hi Todo            guifg=#A09B6B guibg=bg      gui=bold
+
 hi Directory       guifg=#0030F0               gui=bold
 
 hi Error           guifg=#D00000 guibg=#ffc3c0
@@ -76,12 +78,12 @@ hi MoreMsg         guifg=#605000
 hi Question        guifg=#006EB4
 
 hi Pmenu           guifg=#F0F0F0 guibg=#808075
-hi PmenuSel        guifg=#FFFFFF guibg=#005FFF gui=bold
-hi PmenuSbar                     guibg=#404035
-hi PmenuThumb      guifg=#006EB4
+hi PmenuSel        guifg=#FFFFFF guibg=#404035 gui=bold
+hi PmenuSbar                     guibg=#606058
+hi PmenuThumb      guifg=#404040 
 
-hi    Search       guifg=#000000 guibg=#E5C5F0 gui=none
-hi IncSearch       guifg=#000000 guibg=#F5F000 gui=none
+hi    Search       guifg=#000000 guibg=#F5F080 gui=none
+hi IncSearch       guifg=#000000 guibg=#A0F550 gui=none
 
 " spell checking
 if has("spell")
@@ -106,11 +108,15 @@ hi HighlightedyankRegion   guibg=#FFFF00    ctermbg=228
 let g:indentLine_color_term = 253
 let g:indentLine_color_gui = '#D0D0CE'
 
-" braceless plugin indent guide
-hi BracelessIndent guibg=#E5E5E2 ctermbg=253
 " indent guides plugin
 hi IndentGuidesEven guibg=#F5F5F5
 hi IndentGuidesOdd  guibg=#FFFFFF
+" braceless plugin indent guide
+hi BracelessIndent guibg=#E5E5E2 ctermbg=253
+
+" netrw
+hi netrwExe guifg=#FFFFFF guibg=#000000 gui=NONE cterm=NONE
+
 
 " bufexplorer
 hi link bufExplorerBufNbr      Number
@@ -188,6 +194,7 @@ hi PoppyLevel4 guibg=#80C0FF guifg=#000000 gui=bold
 hi PoppyLevel5 guibg=#FDC560 guifg=#000000 gui=bold
 hi PoppyLevel6 guibg=#F0C8BE guifg=#000000 gui=bold
 let g:poppyhigh = ['PoppyLevel1', 'PoppyLevel2', 'PoppyLevel3', 'PoppyLevel4', 'PoppyLevel5', 'PoppyLevel6']
+
 " }}}
 
 
@@ -223,9 +230,46 @@ hi Typedef         guifg=#008000               gui=bold
 hi PreProc         guifg=#A020A0               gui=bold
 hi PreCondit       guifg=#A020A0               gui=bold
 hi Include         guifg=#A020A0               gui=bold
+hi cInclude        guifg=#A020A0               gui=bold
 hi Define          guifg=#A020A0               gui=bold
 hi Macro           guifg=#A02080               
-hi link cInluded Include
+
+hi Namespace       guifg=#506070               gui=italic
+
+
+" C++ semantic highlighting
+" guifg=NONE guibg=#407030
+" hi clighter8MemberRef                 guifg=#0030F0
+" hi clighter8Namespace                 guifg=#808080 gui=italic
+" hi clighter8NamespaceRef              guifg=#808080 gui=italic
+" hi clighter8ParmDecl                  guifg=#000090
+" hi clighter8TemplateTypeParameter     guifg=#B00000 gui=italic
+" hi clighter8ClassDecl                 Identifier
+" hi clighter8ClassTemplate             Identifier
+" hi clighter8Constructor               Identifier
+" hi clighter8CxxMethod                 Identifier
+" hi clighter8Decl                      Identifier
+" hi clighter8DeclRefExpr               Type
+" hi clighter8Destructor                Identifier
+" hi clighter8EnumConstantDecl          Constant
+" hi clighter8EnumDecl                  Identifier
+" hi clighter8FieldDecl                 Identifier
+" hi clighter8FunctionDecl              Identifier
+" hi clighter8FunctionTemplate          Identifier
+" hi clighter8InclusionDirective        cIncluded
+" hi clighter8MacroInstantiation        Constant
+" hi clighter8MemberRefExpr             Type
+" hi clighter8Prepro                    PreProc
+" hi clighter8Ref                       Type
+" hi clighter8Stat                      Keyword
+" hi clighter8StructDecl                Identifier
+" hi clighter8TemplateNoneTypeParameter Identifier
+" hi clighter8TemplateRef               Type
+" hi clighter8TypeRef                   Type
+" hi clighter8TypedefDecl               Identifier
+" hi clighter8UnionDecl                 Identifier
+" hi clighter8Usage                     IncSearch
+" hi clighter8VarDecl                   Identifier
 
 " xml
 hi xmlAttrib    guifg=#007000
@@ -269,10 +313,6 @@ hi link mmaMessage      Type
 hi link mmaSlot         Include
 " }}}
 
-
-if has("win32") || has("win16") || has("win64")
-    let &colorcolumn=join(range(81,999),",")
-endif
 
 " Must be at the end, because of ctermbg=234 bug.
 set background=light

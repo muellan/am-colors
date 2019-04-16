@@ -28,16 +28,20 @@ hi iCursor         guifg=#000000 guibg=#80E0FB
 " hi Scrollbar         
 " hi Tooltip           
 
-hi TabLineFill     guifg=#202015 guibg=#202015
-hi TabLine         guibg=#202015 guifg=#9CFFD3 gui=none cterm=none
-hi TabLineSel      guibg=#dfff00 guifg=#202015 gui=none cterm=none
+hi TabLineFill     guifg=#5A5C50 guibg=#5A5C50
+hi TabLine         guifg=#BEBEAA guibg=#5A5C50 gui=none cterm=none
+hi TabLineSel      guifg=#F8F8F2 guibg=#3C3D34 gui=none cterm=none
 
-hi StatusLine      guifg=#9CFFD3 guibg=#202015 gui=none cterm=none
-hi StatusLineNC    guifg=#202015 guibg=#858575 gui=none cterm=none
-hi User1           guifg=#202015 guibg=#858575 gui=none cterm=none
-hi User2           guifg=#e0e0d8 guibg=#585750 gui=none cterm=none
-hi User3           guifg=#9CFFD3 guibg=#202015 gui=none cterm=none
-hi User4           guifg=#D00000 guibg=#202015 gui=none cterm=none
+hi StatusLine      guifg=#F8F8E2 guibg=#5A5C50 gui=none cterm=none
+hi StatusLineNC    guifg=#BEBEAA guibg=#4F4F42 gui=none cterm=none
+hi User1           guifg=#BEBEAA guibg=#5A5C50 gui=none cterm=none
+hi User2           guifg=#F8F8E2 guibg=#5A5C50 gui=none cterm=none
+hi User3           guifg=#FFA090 guibg=#5A5C50 gui=none cterm=none
+hi User4           guifg=#F0E560 guibg=#5A5C50 gui=none cterm=none
+hi User5           guifg=#808075 guibg=#5A5C50 gui=none cterm=none
+" Terminal Status Line
+hi StatusLineTerm    guifg=#F8F8E2 guibg=#206030 gui=none cterm=none
+hi StatusLineTermNC  guifg=#BEBEAA guibg=#206030 gui=none cterm=none
 
 hi QuickFixLine    guifg=#ffffff guibg=#656555 gui=bold 
 
@@ -45,15 +49,15 @@ hi QuickFixLine    guifg=#ffffff guibg=#656555 gui=bold
 hi WildMenu        guifg=#202020 guibg=#dfff00 gui=bold
 hi VertSplit       guifg=#808080 guibg=NONE    gui=bold
 
-hi Ignore          guifg=#808080 guibg=bg
-hi Conceal         guifg=#FFFFFF
-hi NonText         guifg=#585750               gui=NONE
-hi EndOfBuffer     guifg=#585750               gui=NONE
-
-hi SpecialKey      guifg=#585750
-hi SpecialComment  guifg=#7E8E91               gui=bold
-hi Special         guifg=#B487E1 guibg=bg      gui=bold
 hi Delimiter       guifg=#8F8F8F
+hi Ignore          guifg=#808080 guibg=bg
+hi Conceal         guibg=#585750 
+hi NonText         guifg=#585750               gui=NONE
+hi SpecialKey      guifg=#585750 guibg=bg
+hi Special         guifg=#B487E1               gui=bold
+hi SpecialComment  guifg=#7E8E91               gui=bold
+
+hi EndOfBuffer     guifg=#585750               gui=NONE
 
 hi DiffAdd                       guibg=#205020
 hi DiffChange                    guibg=#605020
@@ -62,6 +66,7 @@ hi DiffText                      guibg=#4C4745 gui=italic,bold
 
 hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold
 hi MatchError      guifg=#FFFFFF guibg=#F02000
+hi MatchWord       guifg=#000000 guibg=#FD971F gui=bold
 
 hi Tag             guifg=#B487E1               gui=italic
 hi Title           guifg=#FF7020               gui=bold
@@ -77,9 +82,9 @@ hi MoreMsg         guifg=#E6DB74
 hi Question        guifg=#66D9EF
 
 " complete menu
-hi Pmenu           guifg=#d5d5d4 guibg=#707065
-hi PmenuSel                      guibg=#505045
-hi PmenuSbar                     guibg=#404035
+hi Pmenu           guifg=#c5c5c0 guibg=#707065
+hi PmenuSbar       guifg=#BEBEAA guibg=#707065
+hi PmenuSel        guifg=#e5e5e0 guibg=#505045
 hi PmenuThumb      guifg=#66D9EF
 
 hi Search          guifg=#F8F8F2 guibg=#68539F gui=none
@@ -114,6 +119,9 @@ hi IndentGuidesEven guibg=#3F4037
 hi IndentGuidesOdd  guibg=#3C3D34
 " braceless plugin indent guide
 hi BracelessIndent guibg=#4C4D44 ctermbg=239
+
+" netrw
+hi netrwExe guifg=#F8F8F2 guibg=#3C3D34 gui=bold
 
 " bufexplorer
 hi link bufExplorerBufNbr      Number
@@ -247,26 +255,47 @@ hi cInclude        guifg=#FA508C               gui=bold
 hi Define          guifg=#FA508C               gui=bold
 hi Macro           guifg=#F286DD               
 
-" easytags
-" hi      cMember       guifg=#50dc82
-" hi      cMemberTag    guifg=#50dc82 
-" hi link cTypeTag      Type
-" hi link cEnumTag      Type
-" hi link cPreProcTag   PreProc
-" hi link cFunctionTag  Function 
+hi Namespace       guifg=#6E7D82               gui=italic
 
 " C++ semantic highlighting
-" hi      occurrences        guifg=NONE     guibg=#407030
-" hi      template params    guifg=#FFAA46  gui=italic
-" hi      param declaration  guifg=#A6E22E
-" hi      data member        guifg=#50dc82
-" hi      namespace          guifg=#6E7D82  gui=italic
+" guifg=NONE guibg=#407030
+" hi clighter8MemberRef                 guifg=#50dc82
+" hi clighter8Namespace                 guifg=#6E7D82 gui=italic
+" hi clighter8NamespaceRef              guifg=#6E7D82 gui=italic
+" hi clighter8ParmDecl                  guifg=#A6E22E
+" hi clighter8TemplateTypeParameter     guifg=#FFAA46 gui=italic
+" hi clighter8ClassDecl                 Identifier
+" hi clighter8ClassTemplate             Identifier
+" hi clighter8Constructor               Identifier
+" hi clighter8CxxMethod                 Identifier
+" hi clighter8Decl                      Identifier
+" hi clighter8DeclRefExpr               Type
+" hi clighter8Destructor                Identifier
+" hi clighter8EnumConstantDecl          Constant
+" hi clighter8EnumDecl                  Identifier
+" hi clighter8FieldDecl                 Identifier
+" hi clighter8FunctionDecl              Identifier
+" hi clighter8FunctionTemplate          Identifier
+" hi clighter8InclusionDirective        cIncluded
+" hi clighter8MacroInstantiation        Constant
+" hi clighter8MemberRefExpr             Type
+" hi clighter8Prepro                    PreProc
+" hi clighter8Ref                       Type
+" hi clighter8Stat                      Keyword
+" hi clighter8StructDecl                Identifier
+" hi clighter8TemplateNoneTypeParameter Identifier
+" hi clighter8TemplateRef               Type
+" hi clighter8TypeRef                   Type
+" hi clighter8TypedefDecl               Identifier
+" hi clighter8UnionDecl                 Identifier
+" hi clighter8Usage                     IncSearch
+" hi clighter8VarDecl                   Identifier
 
 " xml
-hi link xmlTag Keyword
-hi link xmlTagName Keyword  
-hi link xmlEndTag xmlTag
-hi xmlAttrib    guifg=#A6E22E
+hi link xmlTag     Keyword
+hi link xmlTagName Keyword
+hi link xmlEndTag  xmlTag
+hi xmlAttrib guifg=#A6E22E
 " hi xmlNamespace guifg=#  guibg=#  gui=# 
 " hi xmlString    guifg=#  guibg=#  gui=# 
 " hi xmlRegion    guifg=#  guibg=#  gui=# 
@@ -274,10 +303,11 @@ hi xmlAttrib    guifg=#A6E22E
 " hi xmlCdata     guifg=#  guibg=#  gui=# 
 
 " html
-hi link htmlTag xmlTag
-hi link htmlEndTag xmlEndTag
-hi link htmlArg xmlAttrib
+hi link htmlTag         xmlTag
+hi link htmlEndTag      xmlEndTag
+hi link htmlArg         xmlAttrib
 hi link htmlSpecialChar xmlEntity
+
 
 " json
 hi link jsonKeyword Normal
@@ -387,10 +417,6 @@ if &t_Co > 255
     hi WildMenu         ctermfg=235  ctermbg=190  cterm=NONE
 endif
 " }}}
-
-if has("win32") || has("win16") || has("win64")
-    let &colorcolumn=join(range(81,999),",")
-endif
 
 " Must be at the end, because of ctermbg=234 bug.
 set background=dark
