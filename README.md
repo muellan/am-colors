@@ -1,31 +1,50 @@
-# am colorschemes
+# AM Color Schemes
+
+My personal VIM color schemes.
 
 
-### color schemes
- - amlight.vim
- - amdark.vim    
- - amcolors.vim:
-   combines amlight and amdark
- - ampresent.vim:
-   light vim colorscheme optimized for presentations
- - amblack.vim:
-   dark vim colorscheme optimized for presentations
+## amdark    
+![amdark VIM colorscheme](amdark.png)
 
-### plugin support:
- - CleverF         
- - HighlightedYank / Flashy         
+
+## amlight    
+![amlight VIM colorscheme](amlight.png)
+
+
+## ampresent
+A light, high contrast theme optimized for presentations.
+
+![ampresent VIM colorscheme](ampresent.png)
+
+
+
+## Plugin Support
+
+#### In active use
+ - [vim-visual-multi](https://github.com/mg979/vim-visual-multi) - THE best multi cursor implementation
+ - [vim-clap](https://github.com/liuchengxu/vim-clap) - great fuzzy finder/selector
+ - [Clever-f](https://github.com/rhysd/clever-f.vim)         
+ - [poppy.vim](https://github.com/bounceme/poppy.vim)
+ - [vim-highlightedyank](https://github.com/machakann/vim-highlightedyank)
+ - [yegappan/lsp](https://github.com/yegappan/lsp)
+ - [Vista](https://github.com/liuchengxu/vista.vim)
+ - [ALE](https://github.com/dense-analysis/ale)
+ - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+ - [signature](https://github.com/kshenoy/vim-signature)
+ - [easytree.vim](https://github.com/troydm/easytree.vim)
+ - [NeoDebug](https://github.com/cpiger/NeoDebug)
+
+#### Should still work, but not recently tested
  - indent line 
  - indent guides
+ - buf explorer
  - braceless 
- - signify
- - ALE (Asynchronous Lint Engine)
- - GitGutter
- - multi-cursor
  - tagbar
  - CtrlP
- - poppy
+ - Startify
 
-### special file type support
+
+## Special File Type Support
  - xml
  - html
  - json
