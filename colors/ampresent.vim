@@ -63,6 +63,7 @@ hi DiffAdd                         guibg=#D8F5C8
 hi DiffChange                      guibg=#F5F0C8
 hi DiffDelete        guifg=#802020 guibg=#F5D8C8
 hi DiffText                        guibg=#FFFFFF gui=italic cterm=italic
+hi DiffTextAdd                     guibg=#D8F5C8 
 
 hi MatchParen        guifg=#505000 guibg=#F0F050 gui=bold
 hi MatchError        guifg=#FFFFFF guibg=#C000C0
@@ -196,13 +197,33 @@ hi SignatureMarkerText guifg=#FFFFFF guibg=#005000 gui=bold
 
 
 " ALE (Asynchronous Lint Engine)
-hi ALEErrorSign    guifg=#E00000 guibg=#FFC0C0 gui=bold 
-hi ALEWarningSign  guifg=#906000 guibg=#F5F000 gui=bold
-hi ALEError        guifg=NONE    guibg=#FFC0C0 gui=bold
-hi ALEWarning      guifg=NONE    guibg=#FFFFA0 gui=bold
-hi ALEInfo         guifg=NONE    guibg=#A0FFFF gui=NONE 
+hi ALEErrorSign           guifg=#E00000 guibg=#FFC0C0 gui=bold 
+hi ALEWarningSign         guifg=#906000 guibg=#F5F000 gui=bold
+hi ALEInfoSign            guifg=#206090 guibg=#A0FFFF gui=bold cterm=bold
+hi ALEError               guifg=NONE    guibg=#FFC0C0 gui=bold
+hi ALEWarning             guifg=NONE    guibg=#FFFFA0 gui=bold
+hi ALEInfo                guifg=NONE    guibg=#A0FFFF gui=NONE 
+hi ALEVirtualTextError    guifg=#E02020 guibg=#FFE0E0 gui=NONE
+hi ALEVirtualTextWarning  guifg=#C08000 guibg=#FFFFD0 gui=NONE
+hi ALEVirtualTextInfo     guifg=#50D0D0 guibg=#E0FFFF gui=NONE
+hi ALEErrorSignLineNr                   guibg=#FFA0A0 gui=NONE
+hi ALEWarningSignLineNr                 guibg=#FFFFA0 gui=NONE
+hi ALEInfoSignLineNr                    guibg=#A0FFFF gui=NONE
 
-" LSP (sp#TagFunc)
+hi ALEErrorLine    guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi ALEWarningLine  guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi ALEInfoLine     guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+hi link ALEStyleError               ALEError
+hi link ALEStyleWarning             ALEWarning
+hi link ALEStyleErrorSign           ALEErrorSign
+hi link ALEStyleWarningSign         ALEWarningSign
+hi link ALEStyleErrorSignLineNr     ALEErrorSignLineNr
+hi link ALEStyleWarningSignLineNr   ALEWarningSignLineNr
+hi link ALEVirtualTextStyleError    ALEVirtualTextError
+hi link ALEVirtualTextStyleWarning  ALEVirtualTextWarning
+
+" LSP
 hi link LspDiagSignErrorText        ALEErrorSign
 hi link LspDiagSignWarningText      ALEWarningSign
 hi link LspDiagSignHintText         ALEInfoSign
@@ -302,23 +323,23 @@ hi Label             guifg=#0070D0 guibg=NONE gui=bold
    
 hi Constant          guifg=#0030F0 guibg=NONE gui=bold
 hi Boolean           guifg=#0030F0 guibg=NONE gui=italic cterm=italic
-hi Character         guifg=#C82000 guibg=NONE
-hi SpecialChar       guifg=#C82000 guibg=NONE gui=bold
-hi String            guifg=#C82000 guibg=NONE
+hi Character         guifg=#007000 guibg=NONE
+hi SpecialChar       guifg=#007000 guibg=NONE gui=bold
+hi String            guifg=#007000 guibg=NONE
 hi Number            guifg=#D00030 guibg=NONE
 hi Float             guifg=#D00030 guibg=NONE
    
 hi Structure         guifg=#0030F0 guibg=NONE gui=bold
 hi StorageClass      guifg=#0030F0 guibg=NONE gui=bold
-hi Type              guifg=#008000 guibg=NONE gui=bold
-hi Typedef           guifg=#008000 guibg=NONE gui=bold
+hi Type              guifg=#A020A0  guibg=NONE gui=bold
+hi Typedef           guifg=#A020A0  guibg=NONE gui=bold
    
-hi PreProc           guifg=#A020A0 guibg=NONE gui=bold
-hi PreCondit         guifg=#A020A0 guibg=NONE gui=bold
-hi Include           guifg=#A020A0 guibg=NONE gui=bold
-hi cInclude          guifg=#A020A0 guibg=NONE gui=bold
-hi Define            guifg=#A020A0 guibg=NONE gui=bold
-hi Macro             guifg=#A02080 guibg=NONE   
+hi PreProc           guifg=#E02010 guibg=NONE gui=bold
+hi PreCondit         guifg=#E02010 guibg=NONE gui=bold
+hi Include           guifg=#E02010 guibg=NONE gui=bold
+hi cInclude          guifg=#E02010 guibg=NONE gui=bold
+hi Define            guifg=#E02010 guibg=NONE gui=bold
+hi Macro             guifg=#D00010 guibg=NONE   
    
 hi Namespace         guifg=#506070 guibg=NONE gui=italic cterm=italic
 

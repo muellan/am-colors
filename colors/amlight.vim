@@ -53,6 +53,7 @@ hi DiffAdd                         guibg=#D8F5C8
 hi DiffChange                      guibg=#F5F0C8
 hi DiffDelete        guifg=#802020 guibg=#F5D8C8
 hi DiffText                        guibg=#E0E0DC gui=italic cterm=italic
+hi DiffTextAdd                     guibg=#D8F5C8 
 
 hi MatchParen        guifg=#C00000 guibg=#F0C8BE gui=bold
 hi MatchError        guifg=#FFFFFF guibg=#C000C0
@@ -197,13 +198,33 @@ hi SignatureMarkText   guifg=#FFFFFF guibg=#20B020 gui=NONE
 hi SignatureMarkerText guifg=#FFFFFF guibg=#009000 gui=bold
 
 " ALE (Asynchronous Lint Engine)
-hi ALEErrorSign    guifg=#D02000 guibg=#F5D0D0 gui=bold 
-hi ALEWarningSign  guifg=#C58000 guibg=#F5F0D0 gui=bold
-hi ALEError        guifg=NONE    guibg=#FFA0A0 gui=bold
-hi ALEWarning      guifg=NONE    guibg=#FFFFA0 gui=bold
-hi ALEInfo         guifg=NONE    guibg=#A0FFFF gui=NONE 
+hi ALEErrorSign           guifg=#D02000 guibg=#F5D0D0 gui=bold 
+hi ALEWarningSign         guifg=#C58000 guibg=#F5F0D0 gui=bold
+hi ALEInfoSign            guifg=#307090 guibg=#E8E8F0 gui=bold cterm=bold
+hi ALEError               guifg=NONE    guibg=#FFA0A0 gui=bold
+hi ALEWarning             guifg=NONE    guibg=#FFFFA0 gui=bold
+hi ALEInfo                guifg=NONE    guibg=#A0FFFF gui=NONE 
+hi ALEVirtualTextError    guifg=#D02000 guibg=#FFF0F0 gui=NONE
+hi ALEVirtualTextWarning  guifg=#C58000 guibg=#F5F0D0 gui=NONE
+hi ALEVirtualTextInfo     guifg=#307090 guibg=#E8E8F0 gui=NONE
+hi ALEErrorSignLineNr                   guibg=#FFA0A0 gui=NONE
+hi ALEWarningSignLineNr                 guibg=#FFFFA0 gui=NONE
+hi ALEInfoSignLineNr                    guibg=#A0FFFF gui=NONE
 
-" LSP (sp#TagFunc)
+hi ALEErrorLine    guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi ALEWarningLine  guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi ALEInfoLine     guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+hi link ALEStyleError               ALEError
+hi link ALEStyleWarning             ALEWarning
+hi link ALEStyleErrorSign           ALEErrorSign
+hi link ALEStyleWarningSign         ALEWarningSign
+hi link ALEStyleErrorSignLineNr     ALEErrorSignLineNr
+hi link ALEStyleWarningSignLineNr   ALEWarningSignLineNr
+hi link ALEVirtualTextStyleError    ALEVirtualTextError
+hi link ALEVirtualTextStyleWarning  ALEVirtualTextWarning
+
+" LSP
 hi link LspDiagSignErrorText        ALEErrorSign
 hi link LspDiagSignWarningText      ALEWarningSign
 hi link LspDiagSignHintText         ALEInfoSign
@@ -219,6 +240,13 @@ hi LspWriteRef           guifg=#400000 guibg=#F5D8C8 gui=NONE cterm=NONE
 hi LspInlayHintsType     guifg=#90BAC0 guibg=NONE    gui=NONE cterm=NONE
 hi LspInlayHintsParam    guifg=#A0B0A0 guibg=NONE    gui=NONE cterm=NONE
 hi LspSigActiveParameter guifg=#FFFFFF guibg=#808075 gui=NONE cterm=NONE
+" hi link LspDiagInlineError   SpellBad
+" hi link LspDiagInlineHint    SpellLocal
+" hi link LspDiagInlineInfo    SpellRare
+" hi link LspDiagInlineWarning SpellCap
+" hi link LspDiagLine		   NONE
+" hi link LspSymbolName		   Search
+" hi LspSymbolRange		       Visual
 
 " NeoDebug
 hi NeoDbgPC              guifg=#000000 guibg=#FFA500 gui=bold 

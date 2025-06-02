@@ -73,6 +73,7 @@ hi DiffAdd                         guibg=#205020
 hi DiffChange                      guibg=#605020
 hi DiffDelete        guifg=#FF8080 guibg=#603020 gui=NONE   cterm=NONE
 hi DiffText                        guibg=#4C4745 gui=italic cterm=italic
+hi DiffTextAdd                     guibg=#205020
 
 hi MatchParen        guifg=#000000 guibg=#FD971F gui=bold
 hi MatchError        guifg=#FFFFFF guibg=#F02000
@@ -250,18 +251,18 @@ hi SignatureMarkText   guifg=#000000 guibg=#B4E05A gui=NONE
 hi SignatureMarkerText guifg=#000000 guibg=#66D066 gui=bold
 
 " ALE (Asynchronous Lint Engine)
-hi ALEErrorSign                guifg=#FF5040 guibg=#414237 gui=bold cterm=bold
-hi ALEWarningSign              guifg=#EAE530 guibg=#414237 gui=bold cterm=bold
-hi ALEInfoSign                 guifg=#70D0E5 guibg=#414237 gui=bold cterm=bold
-hi ALEError                    guifg=#FF8080 guibg=#600000 gui=NONE cterm=NONE
-hi ALEWarning                  guifg=#FFFF80 guibg=#606000 gui=NONE cterm=NONE
-hi ALEInfo                     guifg=#A0FFFF guibg=#000060 gui=NONE cterm=NONE
-hi ALEVirtualTextError         guifg=#FF8080 guibg=NONE    gui=NONE
-hi ALEVirtualTextWarning       guifg=#FFFF80 guibg=NONE    gui=NONE
-hi ALEVirtualTextInfo          guifg=#A0FFFF guibg=NONE    gui=NONE
-hi ALEErrorSignLineNr                        guibg=#600000 gui=NONE
-hi ALEWarningSignLineNr                      guibg=#606000 gui=NONE
-hi ALEInfoSignLineNr                         guibg=#000060 gui=NONE
+hi ALEErrorSign           guifg=#FF5040 guibg=#414237 gui=bold cterm=bold
+hi ALEWarningSign         guifg=#EAE530 guibg=#414237 gui=bold cterm=bold
+hi ALEInfoSign            guifg=#70D0E5 guibg=#414237 gui=bold cterm=bold
+hi ALEError               guifg=#FF8080 guibg=#600000 gui=NONE cterm=NONE
+hi ALEWarning             guifg=#FFFF80 guibg=#606000 gui=NONE cterm=NONE
+hi ALEInfo                guifg=#A0FFFF guibg=#000060 gui=NONE cterm=NONE
+hi ALEVirtualTextError    guifg=#FF8080 guibg=NONE    gui=NONE
+hi ALEVirtualTextWarning  guifg=#FFFF80 guibg=NONE    gui=NONE
+hi ALEVirtualTextInfo     guifg=#A0FFFF guibg=NONE    gui=NONE
+hi ALEErrorSignLineNr                   guibg=#600000 gui=NONE
+hi ALEWarningSignLineNr                 guibg=#606000 gui=NONE
+hi ALEInfoSignLineNr                    guibg=#000060 gui=NONE
 
 hi ALEErrorLine    guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi ALEWarningLine  guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE gui=NONE cterm=NONE
