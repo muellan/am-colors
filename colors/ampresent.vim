@@ -20,7 +20,7 @@ hi SignColumn        guifg=#555555 guibg=#EAEAEA
 hi FoldColumn        guifg=#606055 guibg=#EAEAEA
 hi Scrollbar         guifg=#606055 guibg=#EAEAEA
 hi VisualNOS                       guibg=#EAEAEA
-hi Visual                          guibg=#A0E5FF
+hi Visual            guifg=NONE    guibg=#A0E5FF
 hi Folded            guifg=#202020 guibg=#C2C2C0  
 hi CursorLine                      guibg=#C0F5FF           cterm=NONE
 hi CursorColumn                    guibg=#C0F5FF           cterm=NONE
@@ -36,6 +36,10 @@ hi QuickFixLine      guifg=#000000 guibg=#00DFFF gui=bold
 hi TabLineFill       guifg=#B4B4AA guibg=#C4C4BA           cterm=NONE
 hi TabLine           guibg=#C4C4BA guifg=#606055 gui=NONE  cterm=NONE
 hi TabLineSel        guibg=#F8F8F3 guifg=#000000 gui=NONE  cterm=NONE
+
+hi link TabPanelFill TabLineFill
+hi link TabPanel     Tabline
+hi link TabPanelSel  TabLineSel
                                                                      
 hi StatusLine        guifg=#202015 guibg=#C4C4BA gui=NONE  cterm=NONE
 hi StatusLineNC      guifg=#808075 guibg=#E0E0DA gui=NONE  cterm=NONE
@@ -48,6 +52,8 @@ hi User5             guifg=#808075 guibg=#C4C4BA gui=bold  cterm=NONE
 hi Terminal          guifg=#FFFFFF guibg=#000000           cterm=NONE
 hi StatusLineTerm    guifg=#202015 guibg=#C4C4BA gui=NONE  cterm=NONE
 hi StatusLineTermNC  guifg=#808075 guibg=#E0E0DA gui=NONE  cterm=NONE
+
+hi MsgArea           guifg=NONE guibg=NONE 
 
 hi Delimiter         guifg=#8F8F8F
 hi Ignore            guifg=#87877D guibg=NONE
@@ -63,7 +69,7 @@ hi DiffAdd                         guibg=#D8F5C8
 hi DiffChange                      guibg=#F5F0C8
 hi DiffDelete        guifg=#802020 guibg=#F5D8C8
 hi DiffText                        guibg=#FFFFFF gui=italic cterm=italic
-hi DiffTextAdd                     guibg=#D8F5C8 
+hi DiffTextAdd                     guibg=#D0FFC0 
 
 hi MatchParen        guifg=#505000 guibg=#F0F050 gui=bold
 hi MatchError        guifg=#FFFFFF guibg=#C000C0
@@ -84,10 +90,14 @@ hi Question          guifg=#006EB4
 hi WildMenu          guifg=#FFFFFF guibg=#404040 gui=bold
 hi Tooltip           guifg=#000000 guibg=#D0D0CA
 hi Menu              guifg=#000000 guibg=#D0D0CA
+hi ComplMatchIns     guifg=#FFFFFF guibg=#404040
+
 hi Pmenu             guifg=#000000 guibg=#D0D0CA
 hi PmenuSel          guifg=#FFFFFF guibg=#404035 gui=bold
 hi PmenuSbar                       guibg=#707065
-hi PmenuThumb        guifg=#404035 guibg=#404035
+hi PmenuThumb        guifg=#404035 guibg=#404040
+hi PmenuMatch        guifg=#FFFFFF guibg=#404040 
+hi PmenuMatchSel     guifg=#FFFFFF guibg=#404040  
 
 hi Search            guifg=#000000 guibg=#F5F080 gui=NONE
 hi CurSearch         guifg=#000000 guibg=#A0F550 gui=NONE
@@ -95,10 +105,10 @@ hi IncSearch         guifg=#000000 guibg=#A0F550 gui=NONE
 
 " spell checking
 if has("spell")
-    hi SpellBad      guisp=#D02000 gui=undercurl
-    hi SpellCap      guisp=#006EB4 gui=undercurl
-    hi SpellLocal    guisp=#009614 gui=undercurl
-    hi SpellRare     guisp=#6496AA gui=undercurl
+    hi SpellBad      guisp=#D02000 gui=undercurl ctermul=160 cterm=undercurl
+    hi SpellCap      guisp=#006EB4 gui=undercurl ctermul=25  cterm=undercurl
+    hi SpellLocal    guisp=#009614 gui=undercurl ctermul=28  cterm=undercurl
+    hi SpellRare     guisp=#6496AA gui=undercurl ctermul=67  cterm=undercurl
 endif
 
 hi Debug       guifg=#BCA3A3  gui=bold
@@ -197,15 +207,22 @@ hi SignatureMarkerText guifg=#FFFFFF guibg=#005000 gui=bold
 
 
 " ALE (Asynchronous Lint Engine)
-hi ALEErrorSign           guifg=#E00000 guibg=#FFC0C0 gui=bold 
-hi ALEWarningSign         guifg=#906000 guibg=#F5F000 gui=bold
+" hi ALEError               guifg=NONE    guibg=#FFC0C0 gui=bold
+" hi ALEWarning             guifg=NONE    guibg=#FFFFA0 gui=bold
+" hi ALEInfo                guifg=NONE    guibg=#A0FFFF gui=NONE 
+
+hi ALEError               guifg=NONE    guibg=#FFE0E0 guisp=#E00000 gui=undercurl ctermul=210  cterm=undercurl
+hi ALEWarning             guifg=NONE    guibg=#FFFFD0 guisp=#906000 gui=undercurl ctermul=228  cterm=undercurl
+hi ALEInfo                guifg=NONE    guibg=#E0FFFF guisp=#206090 gui=undercurl ctermul=159  cterm=undercurl
+
+hi ALEErrorSign           guifg=#E00000 guibg=#FFC0C0 gui=bold ctermfg=160  ctermbg=217  cterm=bold
+hi ALEWarningSign         guifg=#906000 guibg=#F5F000 gui=bold ctermfg=94   ctermbg=226  cterm=bold
 hi ALEInfoSign            guifg=#206090 guibg=#A0FFFF gui=bold cterm=bold
-hi ALEError               guifg=NONE    guibg=#FFC0C0 gui=bold
-hi ALEWarning             guifg=NONE    guibg=#FFFFA0 gui=bold
-hi ALEInfo                guifg=NONE    guibg=#A0FFFF gui=NONE 
+
 hi ALEVirtualTextError    guifg=#E02020 guibg=#FFE0E0 gui=NONE
 hi ALEVirtualTextWarning  guifg=#C08000 guibg=#FFFFD0 gui=NONE
 hi ALEVirtualTextInfo     guifg=#50D0D0 guibg=#E0FFFF gui=NONE
+
 hi ALEErrorSignLineNr                   guibg=#FFA0A0 gui=NONE
 hi ALEWarningSignLineNr                 guibg=#FFFFA0 gui=NONE
 hi ALEInfoSignLineNr                    guibg=#A0FFFF gui=NONE
@@ -224,6 +241,10 @@ hi link ALEVirtualTextStyleError    ALEVirtualTextError
 hi link ALEVirtualTextStyleWarning  ALEVirtualTextWarning
 
 " LSP
+hi link LspDiagInlineError          ALEError
+hi link LspDiagInlineHint           ALEInfo
+hi link LspDiagInlineInfo           ALEInfo
+hi link LspDiagInlineWarning        ALEWarning
 hi link LspDiagSignErrorText        ALEErrorSign
 hi link LspDiagSignWarningText      ALEWarningSign
 hi link LspDiagSignHintText         ALEInfoSign
@@ -413,11 +434,6 @@ hi link mmaSlot         Include
 " terminal (256 colors) {{{
 " --------------------------------------------------------------------
 if &t_Co > 255
-  hi ALEError                  ctermfg=NONE ctermbg=217  cterm=bold
-  hi ALEErrorSign              ctermfg=160  ctermbg=217  cterm=bold
-  hi ALEInfo                   ctermfg=NONE ctermbg=159  cterm=NONE
-  hi ALEWarning                ctermfg=NONE ctermbg=229  cterm=bold
-  hi ALEWarningSign            ctermfg=94   ctermbg=226  cterm=bold
   hi Attribute                 ctermfg=32   ctermbg=NONE
   hi AttributeBrackets         ctermfg=27   ctermbg=NONE cterm=bold
   hi AttributeKeyword          ctermfg=27   ctermbg=NONE
@@ -537,17 +553,6 @@ if &t_Co > 255
   hi SpecialChar               ctermfg=160  ctermbg=NONE cterm=bold
   hi SpecialComment            ctermfg=145
   hi SpecialKey                ctermfg=145  ctermbg=NONE
-if !has('nvim')
-  hi SpellBad                  ctermbg=160
-  hi SpellCap                  ctermbg=25
-  hi SpellLocal                ctermbg=28
-  hi SpellRare                 ctermbg=67
-else
-  hi SpellBad                  ctermul=160               cterm=undercurl
-  hi SpellCap                  ctermul=25                cterm=undercurl
-  hi SpellLocal                ctermul=28                cterm=undercurl
-  hi SpellRare                 ctermul=67                cterm=undercurl
-endif
   hi StartifyBracket           ctermfg=182  ctermbg=NONE
   hi StartifyFile              ctermfg=26   ctermbg=NONE
   hi StartifyFooter            ctermfg=102  ctermbg=NONE
