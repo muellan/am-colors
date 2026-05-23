@@ -1,11 +1,11 @@
 " vim: fdm=marker
 " #000000 #293025 #3C3D34 #3F4037 #4C4D44 #5A5C50 #656555
 " #FFFFFF #F8F8F2 #BEBEAA #858575 #8F8F8F #808080
-" #3296F0 #50B0FF #87AFD7 #68ABDD #70D0E5 #80F0FF #A5F5FF #DCFAFF #506080 #6E7D82
+" #3296F0 #50B0FF #87AFD7 #68ABDD #70D0E5 #80F0FF #A5F5FF #B0F0F0 #DCFAFF #506080 #6E7D82
 " #B0A0FF #B8A0E9 #D5C5FF #E0D5FF                 #505080 #68539F
 " #00FFAF #99FF6B #96F032 #B6F22E #B4E05A #C0E080 #50DC82 #66D066 #205020 #80A060 #D2F0CA
 " #F02000 #FF5040 #A52020 #C04040 #FF8080 #FFA090 #603020 #B07070
-" #FF7030 #FD971F #F0961E #FFA546 #FFB86C
+" #FF7030 #FD971F #F0961E #FFA546 #FFC070
 " #F1FF32 #EAE530 #FAEA70 #FFF5A5 #FFF2C0         #605020 #989361
 " #FF00FF #E650DC #FF60A0 #F390E0 #FFA0FF
 
@@ -44,6 +44,7 @@ hi Cursor            guifg=#000000 guibg=#80E0FB gui=NONE   ctermfg=87   ctermbg
 hi CursorIM          guifg=#000000 guibg=#A5F5FF gui=NONE   ctermfg=16   ctermbg=159  cterm=NONE
 hi lCursor           guifg=#000000 guibg=#80E0FB gui=NONE   ctermfg=16   ctermbg=117  cterm=NONE
 hi VertSplit         guifg=#808065 guibg=NONE    gui=bold   ctermfg=241  ctermbg=241  cterm=bold
+" hi VertSplitNC
 hi QuickFixLine      guifg=#ffffff guibg=#656555 gui=bold   ctermfg=231  ctermbg=59   cterm=bold
 
 hi TabLineFill       guifg=#303028 guibg=#282826 gui=NONE   ctermfg=238  ctermbg=244  cterm=NONE
@@ -118,6 +119,10 @@ hi PmenuMatchSel     guifg=#000000 guibg=#FFF5A5 gui=bold   ctermfg=16          
 " hi PmenuExtraSel     guifg=        guibg=        gui=       ctermfg=     ctermbg=     cterm=
 " hi PopupSelected     guifg=        guibg=        gui=       ctermfg=     ctermbg=     cterm=
 " hi PopupNotification guifg=        guibg=        gui=       ctermfg=     ctermbg=     cterm=
+" hi Popup             guifg=        guibg=        gui=       ctermfg=     ctermbg=     cterm=
+" hi PopupBorder       guifg=        guibg=        gui=       ctermfg=     ctermbg=     cterm=
+" hi PopupTitle        guifg=        guibg=        gui=       ctermfg=     ctermbg=     cterm=
+
 
 hi Search            guifg=#F8F8F2 guibg=#68539F gui=NONE   ctermfg=NONE ctermbg=61   cterm=NONE
 hi CurSearch         guifg=#000000 guibg=#D5C5FF gui=NONE   ctermfg=0    ctermbg=189  cterm=NONE
@@ -148,43 +153,15 @@ hi HighlightedyankRegion guifg=NONE guibg=#506080 gui=NONE ctermfg=NONE ctermbg=
 " netrw
 hi netrwExe guifg=#F8F8F2 guibg=#3C3D34 gui=bold ctermfg=231 ctermbg=59 cterm=bold
 
-" EasyTree
-hi EasyTreeRoot              guifg=#70D0E5 guibg=NONE gui=bold ctermbg=NONE cterm=bold 
-hi EasyTreeRootUp            guifg=#87AFD7 guibg=NONE gui=bold ctermbg=NONE cterm=bold 
-hi EasyTreeDir               guifg=#87AFD7 guibg=NONE gui=bold ctermbg=NONE cterm=bold 
-hi EasyTreeDirArrow          guifg=#70D0E5 guibg=NONE gui=bold ctermbg=NONE cterm=bold 
-hi EasyTreeGitBranch         guifg=#D7D7FF guibg=NONE gui=bold ctermbg=NONE cterm=bold 
-hi EasyTreeGitStaged         guifg=#D2F0CA guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeGitUnstaged       guifg=#D2F0CA guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeGitSeparator      guifg=#858575 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeGitAdded          guifg=#FAEA70 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeGitModified       guifg=#FAEA70 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeGitRenamed        guifg=#DCFAFF guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeGitCopied         guifg=#DCFAFF guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeGitDeleted        guifg=#FF8080 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeGitUnmerged       guifg=#D7D7FF guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeGitUntracked      guifg=#C0E080 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFile              guifg=#E4E4E4 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileCpp           guifg=#E0F8D0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileHpp           guifg=#E0F0E0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileJSON          guifg=#EFEFBA guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileJS            guifg=#C0E0F0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileVIM           guifg=#E0D0F0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileMarkdown      guifg=#F0D0C0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFilePython        guifg=#E0F0B0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileOffice        guifg=#C0D0F0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileMarkup        guifg=#F0F0B0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileStyleSheet    guifg=#F0F0B0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileShellScript   guifg=#E0F0C0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileImage         guifg=#F0CAB0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileVectorImage   guifg=#F0D5B0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileAudio         guifg=#F0D0E0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileVideo         guifg=#F0E0F0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileHTML          guifg=#E0F0F0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileMarkup        guifg=#F0F0D0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi EasyTreeFileStyleSheet    guifg=#F0D0F0 guibg=NONE gui=NONE ctermbg=NONE cterm=NONE  
-hi link EasyTreeGitIgnored   Comment 
-hi link EasyTreeGitUnknown   Comment
+" SupraTree
+hi SupraTreeGitAdded    guifg=#B6F22E guibg=NONE ctermfg=10 ctermbg=NONE
+hi SupraTreeGitModified guifg=#FAEA70 guibg=NONE ctermfg=14 ctermbg=NONE
+hi SupraTreeGitDeleted  guifg=#FF5040 guibg=NONE ctermfg=9  ctermbg=NONE
+hi SupraTreeGitRenamed  guifg=#FAEA70 guibg=NONE ctermfg=14 ctermbg=NONE
+hi SupraTreeDeleted     guifg=#FF5040 guibg=NONE ctermfg=9  ctermbg=NONE
+hi SupraTreeNewFile     guifg=#B6F22E guibg=NONE ctermfg=10 ctermbg=NONE
+hi SupraTreeRenamed     guifg=#FAEA70 guibg=NONE ctermfg=14 ctermbg=NONE
+hi SupraTreeCopy        guifg=#B0A0FF guibg=NONE ctermfg=13 ctermbg=NONE
 
 " NERD Tree
 hi NERDTreeOpenBuffer guifg=#202018 guibg=#FFF5A5 gui=bold ctermfg=123 ctermbg=16 cterm=bold
@@ -208,17 +185,7 @@ hi ClapFileName             guifg=#EEEEE8 guibg=NONE    gui=NONE ctermfg=255  ct
 hi ClapFilePath             guifg=#BABAB8 guibg=NONE    gui=NONE ctermfg=255  ctermbg=NONE cterm=NONE  
 hi ClapPathPrefix           guifg=#BABAB8 guibg=NONE    gui=NONE ctermfg=255  ctermbg=NONE cterm=NONE  
 
-let g:clap_fuzzy_match_hl_groups = [
-  \ [118 , '#FD9020'] ,
-  \ [46  , '#FDA020'] ,
-  \ [47  , '#FDB025'] ,
-  \ [48  , '#FEC030'] ,
-  \ [49  , '#FFD040'] ,
-  \ [50  , '#FFE050'] ,
-  \ [51  , '#FFF560'] ,
-  \ [123 , '#FFFFA0'] ,
-  \ [195 , '#FFFFD0'] ,
-  \ ]
+let g:clap_fuzzy_match_hl_groups = [[118 ,'#FD9020'] , [46,'#FDA020'], [47, '#FDB025'], [48, '#FEC030'], [49, '#FFD040'], [50, '#FFE050'], [51, '#FFF560'], [123, '#FFFFA0'], [195, '#FFFFD0'] ]
 
 " Vista
 hi VistaPublic     guifg=Green  guibg=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
@@ -299,7 +266,7 @@ hi link ALEStyleWarningSignLineNr   ALEWarningSignLineNr
 hi link ALEVirtualTextStyleError    ALEVirtualTextError
 hi link ALEVirtualTextStyleWarning  ALEVirtualTextWarning
 
-" LSP 
+" LSP Diagnostics
 hi link LspDiagInlineError          ALEError
 hi link LspDiagInlineHint           ALEInfo
 hi link LspDiagInlineInfo           ALEInfo
@@ -319,6 +286,30 @@ hi LspWriteRef            guifg=#FFF0E0 guibg=#604020 gui=NONE cterm=NONE
 hi LspInlayHintsType      guifg=#809AA0 guibg=NONE    gui=NONE cterm=NONE
 hi LspInlayHintsParam     guifg=#859085 guibg=NONE    gui=NONE cterm=NONE
 hi LspSigActiveParameter  guifg=#000000 guibg=#BEBEAA gui=NONE cterm=NONE
+" LSP Semantic Highlighting
+hi link LspSemanticClass         Type
+hi link LspSemanticComment       Comment
+hi link LspSemanticDecorator     Macro
+hi link LspSemanticEnum          Enumeration
+hi link LspSemanticEnumMember    Enumerator
+hi link LspSemanticEvent         Event     
+hi link LspSemanticFunction      Function
+hi link LspSemanticInterface     TypeDef
+hi link LspSemanticKeyword       Keyword
+hi link LspSemanticMacro         Macro
+hi link LspSemanticMethod        Function
+hi link LspSemanticModifier      Type
+hi link LspSemanticNamespace     Namespace
+hi link LspSemanticNumber        Number
+hi link LspSemanticOperator      Operator
+hi link LspSemanticParameter     Identifier
+hi link LspSemanticProperty      Field
+hi link LspSemanticRegexp        String
+hi link LspSemanticString        String
+hi link LspSemanticStruct        Type
+hi link LspSemanticType          Type
+hi link LspSemanticTypeParameter TypeParameter
+hi link LspSemanticVariable      Normal
 
 " NeoDebug
 hi NeoDbgPC               guifg=#000000 guibg=#FFA500 gui=bold cterm=bold
@@ -411,12 +402,12 @@ hi Loop              guifg=#B8A0E9 guibg=NONE gui=bold   ctermfg=147  ctermbg=NO
 hi Operator          guifg=#F8F8F2 guibg=NONE gui=NONE   ctermfg=231  ctermbg=NONE cterm=NONE
 hi Function          guifg=#F8F8F2 guibg=NONE gui=bold   ctermfg=231  ctermbg=NONE cterm=bold
 hi Identifier        guifg=#D2F0CA guibg=NONE gui=NONE   ctermfg=194  ctermbg=NONE cterm=NONE
-hi Label             guifg=#FFB86C guibg=NONE gui=bold   ctermfg=186  ctermbg=NONE cterm=bold
+hi Label             guifg=#FFB0C0 guibg=NONE gui=bold,italic   ctermfg=186  ctermbg=NONE cterm=bold,italic
 
 hi Constant          guifg=#B8A0E9 guibg=NONE gui=bold   ctermfg=147  ctermbg=NONE cterm=bold
 hi Boolean           guifg=#B8A0E9 guibg=NONE gui=bold,italic ctermfg=111  ctermbg=NONE cterm=bold,italic
 hi Character         guifg=#FAEA70 guibg=NONE gui=NONE   ctermfg=221  ctermbg=NONE cterm=NONE
-hi SpecialChar       guifg=#FFB86C guibg=NONE gui=bold   ctermfg=220  ctermbg=NONE cterm=bold
+hi SpecialChar       guifg=#F0A520 guibg=NONE gui=bold   ctermfg=220  ctermbg=NONE cterm=bold
 hi String            guifg=#FAEA70 guibg=NONE gui=NONE   ctermfg=228  ctermbg=NONE cterm=NONE
 hi Number            guifg=#FFA090 guibg=NONE gui=NONE   ctermfg=209  ctermbg=NONE cterm=NONE
 hi Float             guifg=#FFA090 guibg=NONE gui=NONE   ctermfg=209  ctermbg=NONE cterm=NONE
@@ -431,24 +422,26 @@ hi PreCondit         guifg=#FF60A0 guibg=NONE gui=bold   ctermfg=205  ctermbg=NO
 hi Include           guifg=#FF60A0 guibg=NONE gui=bold   ctermfg=205  ctermbg=NONE cterm=bold
 hi cInclude          guifg=#FF60A0 guibg=NONE gui=bold   ctermfg=205  ctermbg=NONE cterm=bold
 hi Define            guifg=#FF60A0 guibg=NONE gui=bold   ctermfg=205  ctermbg=NONE cterm=bold
-hi Macro             guifg=#F390E0 guibg=NONE gui=NONE   ctermfg=218  ctermbg=NONE cterm=NONE
+hi Macro             guifg=#F59AE0 guibg=NONE gui=NONE   ctermfg=218  ctermbg=NONE cterm=NONE
 
-hi Namespace         guifg=#6E7D82 guibg=NONE gui=italic ctermfg=66   ctermbg=NONE cterm=italic
-
-hi Enumeration       guifg=#70D0E5 guibg=NONE gui=bold   ctermfg=80   ctermbg=NONE cterm=bold
-hi Enumerator        guifg=#50DC82 guibg=NONE gui=italic ctermfg=78   ctermbg=NONE cterm=italic
 hi Attribute         guifg=#A5A0B5 guibg=NONE gui=NONE   ctermfg=145  ctermbg=NONE cterm=NONE
-hi AttributeKeyword  guifg=#B8A0E9 guibg=NONE gui=NONE   ctermfg=146  ctermbg=NONE cterm=NONE
 hi AttributeBrackets guifg=#B8A0E9 guibg=NONE gui=bold   ctermfg=146  ctermbg=NONE cterm=bold
+hi AttributeKeyword  guifg=#B8A0E9 guibg=NONE gui=NONE   ctermfg=146  ctermbg=NONE cterm=NONE
+hi DocumentationTag  guifg=#A09B6B guibg=bg   gui=bold                             cterm=bold
+hi Enumeration       guifg=#70D0E5 guibg=NONE gui=NONE   ctermfg=80   ctermbg=NONE cterm=NONE
+hi Enumerator        guifg=#B0F0F0 guibg=NONE gui=italic ctermfg=78   ctermbg=NONE cterm=italic
+hi Field             guifg=#8ff0a4 guibg=NONE gui=NONE   ctermfg=78   ctermbg=NONE cterm=NONE  
+hi Namespace         guifg=#6E7D82 guibg=NONE gui=italic ctermfg=66   ctermbg=NONE cterm=italic
+hi TypeParameter     guifg=#FFC070 guibg=NONE gui=italic ctermfg=214  ctermbg=NONE cterm=italic
 
 " C++
-hi def link cppAttribute         Attribute
-hi def link cppAttributeKeyword  AttributeKeyword
-hi def link cppAttributeBrackets AttributeBrackets
-hi def link cppSTLnamespace      Namespace
-hi def link cppSTLenum           Enumeration
-hi def link cppSTLconcept        Typedef
-hi def      cppDoxygenTag        guifg=#A09B6B guibg=bg gui=bold cterm=bold
+hi link cppAttribute         Attribute
+hi link cppAttributeKeyword  AttributeKeyword
+hi link cppAttributeBrackets AttributeBrackets
+hi link cppSTLnamespace      Namespace
+hi link cppSTLenum           Enumeration
+hi link cppSTLconcept        Typedef
+hi link cppDoxygenTag        DocumentationTag
 
 " git
 " hi gitType  guifg=#000000 guibg=#A0A0A0

@@ -36,7 +36,6 @@ A light, high contrast theme optimized for presentations.
  - [Vista](https://github.com/liuchengxu/vista.vim) - modern tagbar (works great with LSP)
  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
  - [signature](https://github.com/kshenoy/vim-signature)
- - [easytree.vim](https://github.com/troydm/easytree.vim)
  - [NeoDebug](https://github.com/cpiger/NeoDebug)
 
 #### Should still work, but not recently tested

@@ -266,6 +266,30 @@ hi LspSigActiveParameter guifg=#FFFFFF guibg=#808075 gui=NONE cterm=NONE
 " hi link LspDiagLine		   NONE
 " hi link LspSymbolName		   Search
 " hi LspSymbolRange		       Visual
+" LSP Semantic Highlighting
+hi link LspSemanticClass         Type
+hi link LspSemanticComment       Comment
+hi link LspSemanticDecorator     Macro
+hi link LspSemanticEnum          Enumeration
+hi link LspSemanticEnumMember    Enumerator
+hi link LspSemanticEvent         Identifier
+hi link LspSemanticFunction      Function
+hi link LspSemanticInterface     TypeDef
+hi link LspSemanticKeyword       Keyword
+hi link LspSemanticMacro         Macro
+hi link LspSemanticMethod        Function
+hi link LspSemanticModifier      Type
+hi link LspSemanticNamespace     Namespace
+hi link LspSemanticNumber        Number
+hi link LspSemanticOperator      Operator
+hi link LspSemanticParameter     Identifier
+hi link LspSemanticProperty      Identifier
+hi link LspSemanticRegexp        String
+hi link LspSemanticString        String
+hi link LspSemanticStruct        Type
+hi link LspSemanticType          Type
+hi link LspSemanticTypeParameter TypeParameter
+hi link LspSemanticVariable      Identifier
 
 " NeoDebug
 hi NeoDbgPC              guifg=#000000 guibg=#FFA500 gui=bold  cterm=bold
@@ -381,9 +405,10 @@ hi cInclude          guifg=#D03090 guibg=NONE gui=bold   ctermfg=126 ctermbg=NON
 hi Define            guifg=#D03090 guibg=NONE gui=bold   ctermfg=168 ctermbg=NONE cterm=bold
 hi Macro             guifg=#C02070 guibg=NONE gui=NONE   ctermfg=89  ctermbg=NONE cterm=NONE
 
-hi Namespace         guifg=#8E9DA0 guibg=NONE gui=italic ctermfg=66  ctermbg=NONE cterm=italic
+hi Namespace         guifg=#8090A0 guibg=NONE gui=italic                          cterm=italic
+hi TypeParameter     guifg=#C06580 guibg=NONE gui=bold,italic                     cterm=bold,italic
 
-hi Enumeration       guifg=#8040B0 guibg=NONE gui=bold   ctermfg=97  ctermbg=NONE cterm=bold  
+hi Enumeration       guifg=#8040B0 guibg=NONE gui=NONE   ctermfg=97  ctermbg=NONE cterm=NONE  
 hi Enumerator        guifg=#108050 guibg=NONE gui=italic ctermfg=29  ctermbg=NONE cterm=italic
 
 hi Attribute         guifg=#B070E0 guibg=NONE gui=NONE   ctermfg=134 ctermbg=NONE cterm=NONE
